@@ -1,0 +1,35 @@
+.pagination {
+  margin: 0;
+  font-size: 0;
+
+  .page-numbers {
+    margin-right: 5px;
+    display: inline-block;
+    border: 2px solid transparent;
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    color: $dark-blue;
+    @include transition();
+
+    &:hover {
+      border-color: $blue;
+      text-decoration: none;
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+
+    &.current {
+      border-color: $green;
+    }
+
+    &.next,
+    &.prev {
+      font-family: Arial, Tahoma, sans-serif;
+    }
+  }
+}
