@@ -10,3 +10,83 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blue, black, red, dark, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, editor-style, sticky-post, theme-options
 Text Domain: smarty
 */
+
+/*********** Home page Styling ************/
+
+.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 300px !important; }
+.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 360px !important; }
+.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 470px !important; }
+
+.top-bar__content {
+	min-height: auto !important;
+	height: 50px !important;
+}
+
+h2.stm-title,
+h4.stm-title { margin-bottom: 17px; }
+
+div.tabs-content { padding-bottom: 7px !important; }
+
+.tabs-content .vc_tta-panel-body { padding-top: 40px !important; }
+
+div.alumni { margin-bottom: 0 !important; }
+
+div.news-blogs { padding-bottom: 40px !important; }
+
+.stm-vc-footer .stm-link-container { margin-bottom: 5px; }
+.stm-vc-footer .stm-link-container:last-child { margin-bottom: 0; }
+
+.stm-vc-footer .stm-separator { margin-bottom: 25px; }
+
+.share .share__title { display: none; }
+
+.footer-bottom { padding-top: 43px; }
+
+/*********** Home page Styling ************/
+
+/*=================================================
+MEDIA QUERIES START HERE
+====================================================*/
+
+@media (max-width: 991px) and (min-width: 768px) {
+
+	.top-bar_view-style_3 .top-bar__contact_address { display: table-cell !important; }
+
+}
+
+@media (max-width: 768px) {
+
+	.wpb_wrapper .vc_tta-tabs_style-1.vc_tta-tabs.vc_general .vc_tta-panel-body { padding-bottom: 0 !important; }
+
+	.get-involved > .vc_column-inner { padding-top: 0 !important; }
+
+}
+
+@media (max-width: 750px ) {
+
+	h2 { text-align: center !important; }
+
+	h2 + .stm-separator { margin: 0 auto 30px !important; }
+
+	.stm-separator__line { margin: 0 auto !important; }
+
+	.vc_align_left { text-align: center !important; }
+
+	.stm-single-image_responsive img { margin: 0 auto 30px !important; }
+
+	.news .vc_tta-panel-body { margin-bottom: 20px !important; }
+
+	.stm-vc-footer .stm-separator__line { margin: 0 0 25px !important; }
+
+	h4 { margin-top: 40px !important; }
+
+	.footer-bottom .vc_align_left { text-align: left !important; }
+
+	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 60px !important; }
+	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 150px !important; }
+	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 250px !important; }
+
+
+}
+
+
