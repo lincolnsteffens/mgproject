@@ -27,6 +27,8 @@ h4.stm-title { margin-bottom: 17px; }
 
 div.tabs-content { padding-bottom: 7px !important; }
 
+.tabs-content .vc_general { background-color: transparent !important; }
+
 .tabs-content .vc_tta-panel-body { padding-top: 40px !important; }
 
 div.alumni { margin-bottom: 0 !important; }
