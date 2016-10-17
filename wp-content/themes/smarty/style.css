@@ -11,7 +11,9 @@ Tags: blue, black, red, dark, one-column, two-columns, three-columns, four-colum
 Text Domain: smarty
 */
 
-/*********** Home page Styling ************/
+/*=================================================
+HOME PAGE START HERE
+====================================================*/
 
 .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 300px !important; }
 .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 360px !important; }
@@ -44,7 +46,48 @@ div.news-blogs { padding-bottom: 40px !important; }
 
 .footer-bottom { padding-top: 43px; }
 
-/*********** Home page Styling ************/
+.stm-link {
+	padding: 10px 20px;
+	border: 2px solid #00aaff;
+}
+
+.stm-link:hover {
+	background-color: #00aaff;
+	color: #fff;
+	text-decoration: none;
+}
+
+.stm-vc-footer .stm-link {
+	padding: 0;
+	border: 0;
+}
+
+.stm-vc-footer .stm-link:hover {
+	background-color: #fff;
+	color: #00aaff;
+}
+
+.news-blogs .vc_tta-panel-body { padding-top: 30px !important; }
+
+
+/*=================================================
+HOME PAGE ENDS HERE
+====================================================*/
+
+/*=================================================
+ALUMNI START HERE
+====================================================*/
+
+.stm-page-head__content .stm-page-head__title { margin-bottom: 10px; }
+
+.container .stm-page-head__content .stm-page-head__separator { margin-bottom: 15px; }
+
+/*=================================================
+ALUMNI ENDS HERE
+====================================================*/
+
+
+
 
 /*=================================================
 MEDIA QUERIES START HERE
@@ -58,9 +101,16 @@ MEDIA QUERIES START HERE
 
 @media (max-width: 768px) {
 
+	.stm-link:hover {
+		background-color: #fff;
+		color: #00aaff;
+	}
+
 	.wpb_wrapper .vc_tta-tabs_style-1.vc_tta-tabs.vc_general .vc_tta-panel-body { padding-bottom: 0 !important; }
 
 	.get-involved > .vc_column-inner { padding-top: 0 !important; }
+
+	.stm-teacher__photo img { margin: 0 auto !important; }
 
 }
 
@@ -78,17 +128,19 @@ MEDIA QUERIES START HERE
 
 	.news .vc_tta-panel-body { margin-bottom: 20px !important; }
 
-	.stm-vc-footer .stm-separator__line { margin: 0 0 25px !important; }
+	.stm_teacher .vc_column-inner { padding-top: 0 !important; }
+
+	.stm_teacher .stm-spacing  { display: none; }
 
 	h4 { margin-top: 40px !important; }
-
-	.footer-bottom .vc_align_left { text-align: left !important; }
 
 	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 60px !important; }
 	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 150px !important; }
 	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 250px !important; }
 
+	.footer-bottom .vc_align_left { text-align: left !important; }
 
+	.stm-vc-footer .stm-separator__line { margin: 0 0 25px !important; }
 }
 
 
