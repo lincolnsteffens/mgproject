@@ -128,9 +128,10 @@ MEDIA QUERIES START HERE
 
 	.news .vc_tta-panel-body { margin-bottom: 20px !important; }
 
+	.stm_teacher .stm-spacing { display: none; }
+
 	.stm_teacher .vc_column-inner { padding-top: 0 !important; }
 
-	.stm_teacher .stm-spacing  { display: none; }
 
 	h4 { margin-top: 40px !important; }
 
