@@ -118,6 +118,10 @@ MEDIA QUERIES START HERE
 
 }
 
+@media (max-width: 750px )  and ( orientation: landscape ){
+	.stm-teacher .stm-teacher__info { padding: 0 30%;  }
+}
+
 @media (max-width: 750px ) {
 
 	.TextRegular {
@@ -141,17 +145,21 @@ MEDIA QUERIES START HERE
 
 	.stm_teacher .vc_column-inner { padding-top: 0 !important; }
 
-	.tabs-content .vc_column-inner { padding-top: 35px !important; }
+	.stm_teacher .vc_row { padding-top: 35px !important; }
+	.stm_teacher .vc_row:first-child { padding-top: 0 !important; }
+
+	.tabs-content { padding-top: 35px !important; }
 
 	h4 { margin-top: 40px !important; }
 
-	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 60px !important; }
-	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 150px !important; }
-	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 250px !important; }
+	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 30px !important; }
+	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 110px !important; }
+	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 200px !important; }
 
 	.footer-bottom .vc_align_left { text-align: left !important; }
 
 	.stm-vc-footer .stm-separator__line { margin: 0 0 25px !important; }
+
 }
 
 
