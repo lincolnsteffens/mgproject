@@ -94,6 +94,36 @@ ALUMNI ENDS HERE
 
 
 /*=================================================
+BLOGS START HERE
+====================================================*/
+
+.blogs-page { padding-top: 80px; }
+
+.blogs-page .entry-details .entry-summary,
+.news-page .entry-details .entry-summary { line-height: 18px; }
+
+.blogs-page .entry-details .entry-title,
+.news-page .entry-details .entry-title { line-height: 22px; }
+
+.news-page .post_view_list .entry-details:hover,
+.blogs-page .post_view_list .entry-details:hover { background-color: #fff; }
+
+.news-page .post_view_list .entry-details:hover .entry-title,
+.news-page .post_view_list .entry-details:hover .entry-summary,
+.blogs-page .post_view_list .entry-details:hover .entry-title,
+.blogs-page .post_view_list .entry-details:hover .entry-summary { color: #000; }
+
+.news-page .post_view_list .entry-details:hover .entry-meta li,
+.blogs-page .post_view_list .entry-details:hover .entry-meta li { color: #999; }
+
+
+/*=================================================
+BLOGS ENDS HERE
+====================================================*/
+
+
+
+/*=================================================
 MEDIA QUERIES START HERE
 ====================================================*/
 
