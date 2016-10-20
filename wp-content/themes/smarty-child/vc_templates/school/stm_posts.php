@@ -102,11 +102,14 @@ $view_id = uniqid( 'stm-posts_' . $view . '-' );
                                 <?php endif; ?>
                                 <?php if( get_the_excerpt() ) : ?>
                                     <div class="entry-summary">
-                                        <?php the_excerpt(); ?>
+                                     <?php
+                                     //the_excerpt();
+                                     echo substr(get_the_excerpt(), 0, 150)."…";
+                                     ?>
                                         <?php
                                             $readmoreText = get_field("cta_text");
                                             $readmoreLink = get_field("cta_link");
-                                            if (in_category( 'News' )) :?>
+                                            if (in_category( 'News' ) || in_category( 'Blogs' ) ) :?>
                                             <a href="<?php echo $readmoreLink; ?>"><?php echo $readmoreText;?></a>
                                             <?php endif; ?>
 
