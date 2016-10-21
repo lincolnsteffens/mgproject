@@ -2,6 +2,9 @@
 var jq = jQuery;
 
 jq( window ).on( 'load', function () {
+
+	// Read More functionality
+
 	if ( jq( 'div' ).hasClass( 'news-page' ) ) {
 
 		jq( '.stm-posts .entry-summary a' ).each( function( ) {
@@ -13,5 +16,10 @@ jq( window ).on( 'load', function () {
 
 		});
 	}
+
+	// Removing Title Href functionality
+
+	jq( '.stm-posts .entry-title a' ).removeAttr( 'href' );
+
 
 });

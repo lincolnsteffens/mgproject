@@ -94,10 +94,12 @@ ALUMNI ENDS HERE
 
 
 /*=================================================
-BLOGS START HERE
+BLOGS AND NEWS START HERE
 ====================================================*/
 
-.stm-posts { padding-top: 80px; }
+.page-news-list-vc .entry-meta li:last-child { display: none; }
+
+.blogs-page { padding-top: 80px; }
 
 .stm-posts .entry-details .entry-summary { line-height: 18px; }
 
@@ -113,7 +115,7 @@ BLOGS START HERE
 .stm-posts .entry-title a:hover { text-decoration: none; }
 
 /*=================================================
-BLOGS ENDS HERE
+BLOGS AND NEWS ENDS HERE
 ====================================================*/
 
 
@@ -129,6 +131,15 @@ MEDIA QUERIES START HERE
 }
 
 @media (max-width: 768px) {
+
+	.page-blogs .blogs-page { margin-bottom: 60px; }
+
+	.page-blogs .sidebar-content { display: none; }
+
+	.page-blogs .blogs-content {
+		width: 100%;
+		float: none;
+	}
 
 	.stm-link:hover {
 		background-color: #fff;
