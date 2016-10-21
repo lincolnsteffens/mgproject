@@ -63,3 +63,23 @@ function my_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
+
+//body class function
+
+add_filter( 'body_class', 'sk_body_class_for_pages' );
+/**
+ * Adds a css class to the body element
+ *
+ * @param  array $classes the current body classes
+ * @return array $classes modified classes
+ */
+function sk_body_class_for_pages( $classes ) {
+
+	if ( is_singular( 'page' ) ) {
+		global $post;
+		$classes[] = 'page-' . $post->post_name;
+	}
+
+	return $classes;
+
+}
