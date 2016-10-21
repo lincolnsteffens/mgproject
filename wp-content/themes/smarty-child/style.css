@@ -58,8 +58,8 @@ div.news-blogs { padding-bottom: 40px !important; }
 }
 
 .stm-link:hover {
-	background-color: #00aaff;
 	color: #fff;
+	background-color: #00aaff;
 	text-decoration: none;
 }
 
@@ -69,8 +69,9 @@ div.news-blogs { padding-bottom: 40px !important; }
 }
 
 .stm-vc-footer .stm-link:hover {
-	background-color: #fff;
 	color: #00aaff;
+	background-color: #e0e2e5;
+	text-decoration: underline;
 }
 
 .news-blogs .vc_tta-panel-body { padding-top: 30px !important; }
@@ -144,8 +145,8 @@ MEDIA QUERIES START HERE
 	}
 
 	.stm-link:hover {
-		background-color: #fff;
 		color: #00aaff;
+		background-color: #fff;
 	}
 
 	.wpb_wrapper .vc_tta-tabs_style-1.vc_tta-tabs.vc_general .vc_tta-panel-body { padding-bottom: 0 !important; }
