@@ -12,6 +12,7 @@
  * 7. Visual Composer
  * 8. Widgets
  * 9. Print Styles
+ * 10. Enqueued Files
  *
 */
 
@@ -50,3 +51,11 @@ require_once $inc_path . '/widgets/widgets.php';
 
 // 9. Print Styles
 require_once $inc_path . '/print_styles.php';
+
+// 10. Enqueued Files
+function my_theme_enqueue_styles() {
+   wp_enqueue_script('validation_script', get_stylesheet_directory_uri() . '/assets/js/script.js', false, true );
+   wp_enqueue_script('library_script', get_stylesheet_directory_uri() . '/assets/vendors/jquery-1.11.3.min.js', false, true );
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles');
+
