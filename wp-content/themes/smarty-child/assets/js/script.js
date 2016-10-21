@@ -19,7 +19,7 @@ jq( window ).on( 'load', function () {
 
 	// Removing Title Href functionality
 
-	jq( '.stm-posts .entry-title a' ).removeAttr( 'href' );
+	jq( '.stm-posts .entry-title a, .stm-posts .entry-thumbnail a, .stm-posts .entry-meta a' ).removeAttr( 'href' );
 
 
 });
