@@ -15,9 +15,13 @@ Text Domain: smarty
 HOME PAGE START HERE
 ====================================================*/
 
-.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 300px !important; }
-.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 360px !important; }
-.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 470px !important; }
+.header-holder { background-color: #fff; }
+
+.header_view-style_3 .stm-nav__menu_type_header > .menu-item > a { color: #000 !important; }
+
+#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 300px !important; }
+#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 360px !important; }
+#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 470px !important; }
 
 .top-bar__content {
 	min-height: auto !important;
@@ -76,6 +80,31 @@ div.news-blogs { padding-bottom: 40px !important; }
 
 .news-blogs .vc_tta-panel-body { padding-top: 30px !important; }
 
+.entry-content .tabs-content { margin-top: 0 !important; }
+
+.tp-loop-wrap .tp-mask-wrap .tp-shape { background: rgba(1, 27, 58, 0.6) !important }
+
+.slider-slides .btnBlue a,
+.tabs-content .stm-link,
+.alumni .stm-link,
+.news-blogs .stm-link {
+	border: 2px solid #81ca00 !important;
+	background: #81ca00;
+	color: #fff;
+}
+
+.slider-slides .btnBlue a:hover,
+.tabs-content .stm-link:hover,
+.alumni .stm-link:hover,
+.news-blogs .stm-link:hover {
+	background: transparent !important;
+	border: 2px solid #81ca00 !important;
+}
+
+.tabs-content .stm-link:hover,
+.alumni .stm-link:hover,
+.news-blogs .stm-link:hover { color: #81ca00; }
+
 
 /*=================================================
 HOME PAGE ENDS HERE
@@ -116,6 +145,15 @@ BLOGS AND NEWS START HERE
 .stm-posts .entry-title a:hover { text-decoration: none; }
 
 .stm-posts .entry-meta a:hover { text-decoration: none; }
+
+ .vc_wp_search .widget_search .stm-search-form .stm-search-form__field {
+	height: auto;
+	padding: 12px 55px 12px 20px;
+	line-height: 18px;
+}
+
+/*.vc_wp_tagcloud { display: none; }*/
+
 
 /*=================================================
 BLOGS AND NEWS ENDS HERE
@@ -191,9 +229,9 @@ MEDIA QUERIES START HERE
 
 	h4 { margin-top: 40px !important; }
 
-	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 30px !important; }
-	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 110px !important; }
-	.tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 200px !important; }
+	#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 30px !important; }
+	#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 110px !important; }
+	#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 200px !important; }
 
 	.footer-bottom .vc_align_left { text-align: left !important; }
 
