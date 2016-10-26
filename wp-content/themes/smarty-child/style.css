@@ -14,10 +14,10 @@ Text Domain: smarty
 /*=================================================
 HOME PAGE START HERE
 ====================================================*/
-
+/*
 .header-holder { background-color: #fff; }
 
-.header_view-style_3 .stm-nav__menu_type_header > .menu-item > a { color: #000 !important; }
+.header_view-style_3 .stm-nav__menu_type_header > .menu-item > a { color: #000 !important; }*/
 
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 300px !important; }
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 360px !important; }
@@ -50,7 +50,9 @@ div.news-blogs { padding-bottom: 40px !important; }
 
 .stm-vc-footer .stm-separator { margin-bottom: 25px; }
 
-.stm-vc-footer { background-color: rgba(1, 27, 58, 0.1); }
+/*.stm-vc-footer { background-color: rgba(1, 27, 58, 0.1); }*/
+
+.stm-vc-footer { background-color: #000; }
 
 .share .share__title { display: none; }
 
@@ -59,6 +61,7 @@ div.news-blogs { padding-bottom: 40px !important; }
 .stm-link {
 	padding: 10px 20px;
 	border: 2px solid #00aaff;
+	display: inline-block;
 }
 
 .stm-link:hover {
@@ -72,10 +75,26 @@ div.news-blogs { padding-bottom: 40px !important; }
 	border: 0;
 }
 
+.stm-vc-footer .wpb_wrapper .stm-font_color_dark-blue { font-weight: 500; }
+
+.stm-vc-footer .wpb_text_column p,
+.stm-vc-footer .stm-link { font-weight: 300; }
+
+.stm-vc-footer .wpb_wrapper .stm-font_color_dark-blue,
+.stm-vc-footer .wpb_text_column p { color: #fff !important; }
+
+.stm-vc-footer .stm-link {
+	color: #fff;
+	border: none !important;
+	background: transparent;
+}
+
 .stm-vc-footer .stm-link:hover {
-	color: #00aaff;
-	background-color: #e0e2e5;
-	text-decoration: underline;
+	color: #ff7634;
+	/*background-color: #000;*/
+	text-decoration: none;
+	background: transparent !important;
+	border: none !important;
 }
 
 .news-blogs .vc_tta-panel-body { padding-top: 30px !important; }
@@ -85,25 +104,29 @@ div.news-blogs { padding-bottom: 40px !important; }
 .tp-loop-wrap .tp-mask-wrap .tp-shape { background: rgba(1, 27, 58, 0.6) !important }
 
 .slider-slides .btnBlue a,
-.tabs-content .stm-link,
-.alumni .stm-link,
-.news-blogs .stm-link {
-	border: 2px solid #81ca00 !important;
-	background: #81ca00;
+.stm-link {
+	border: 2px solid #ff7634 !important;
+	background: #ff7634;
 	color: #fff;
 }
 
 .slider-slides .btnBlue a:hover,
-.tabs-content .stm-link:hover,
-.alumni .stm-link:hover,
-.news-blogs .stm-link:hover {
+.stm-link:hover {
 	background: transparent !important;
-	border: 2px solid #81ca00 !important;
+	border: 2px solid #ff7634 !important;
 }
 
 .tabs-content .stm-link:hover,
 .alumni .stm-link:hover,
-.news-blogs .stm-link:hover { color: #81ca00; }
+.news-blogs .stm-link:hover,
+.stm-link:hover { color: #ff7634; }
+
+.social-copyrights .wpb_wrapper { text-align: right; }
+
+.footer-image {
+	width: 278px;
+	height: 59px;
+}
 
 
 /*=================================================
@@ -114,7 +137,14 @@ HOME PAGE ENDS HERE
 ALUMNI START HERE
 ====================================================*/
 
+.stm-page-head_color_white .stm-page-head__overlay { background: transparent !important; }
+
 .stm-page-head__content .stm-page-head__title { margin-bottom: 10px; }
+
+.stm-teacher .stm-teacher__photo img {
+	width: 350px;
+	height: 240px;
+}
 
 .container .stm-page-head__content .stm-page-head__separator { margin-bottom: 15px; }
 
@@ -159,7 +189,18 @@ BLOGS AND NEWS START HERE
 BLOGS AND NEWS ENDS HERE
 ====================================================*/
 
+/*=================================================
+PROGRAMS STARTS HERE
+====================================================*/
 
+.program-sections { padding-top: 45px; }
+.program-sections:last-child { padding-bottom: 45px; }
+
+.program-sections h2 { font-weight: 500; }
+
+/*=================================================
+PROGRAMS ENDS HERE
+====================================================*/
 
 /*=================================================
 MEDIA QUERIES START HERE
@@ -201,6 +242,32 @@ MEDIA QUERIES START HERE
 
 @media (max-width: 750px ) {
 
+	.header-mobile__logo .logo img {
+		width: 222px;
+    height: 48px;
+  }
+
+	.header-holder .header-mobile { background: #000; }
+
+	.header-mobile  .header-mobile__nav-control .header-mobile__control-line,
+	.header-mobile  .header-mobile__nav-control .header-mobile__control-line:before,
+	.header-mobile  .header-mobile__nav-control .header-mobile__control-line:after { background: #fff; }
+
+	.program-sections { padding-top: 25px; }
+
+	.program-sections .stm-links { display: inline-block; }
+
+	.program-sections .stm-link-container {
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.program-sections .stm-single-image img { margin-bottom: 20px !important; }
+
+	.sound-bite .stm-link-container { margin-bottom: 20px; }
+
+	.social-copyrights .wpb_wrapper { text-align: left; }
+
 	.TextRegular {
 		font-size: 15px !important;
 		line-height: 18px !important;
@@ -213,6 +280,8 @@ MEDIA QUERIES START HERE
 	.stm-separator__line { margin: 0 auto !important; }
 
 	.vc_align_left { text-align: center !important; }
+
+	.get-involved-grids .wpb_column:last-child .stm-link-container { margin-bottom: 50px; }
 
 	.stm-single-image_responsive img { margin: 0 auto 30px !important; }
 
@@ -230,7 +299,7 @@ MEDIA QUERIES START HERE
 	h4 { margin-top: 40px !important; }
 
 	#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 30px !important; }
-	#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 110px !important; }
+	#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 80px !important; }
 	#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 200px !important; }
 
 	.footer-bottom .vc_align_left { text-align: left !important; }
