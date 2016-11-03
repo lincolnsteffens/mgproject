@@ -83,3 +83,4 @@ function sk_body_class_for_pages( $classes ) {
 	return $classes;
 
 }
+
