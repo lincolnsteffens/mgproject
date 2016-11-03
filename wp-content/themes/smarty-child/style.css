@@ -64,7 +64,7 @@ div.news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
 
 .news-blogs .vc_tta-panel-body { padding-top: 30px !important; }
 .entry-content .tabs-content { margin-top: 0 !important; }
-.tp-loop-wrap .tp-mask-wrap .tp-shape { background: rgba(1, 27, 58, 0.6) !important }
+.tp-loop-wrap .tp-mask-wrap .tp-shape { background: rgba(1, 27, 58, .6) !important }
 
 .slider-slides .btnBlue a,
 .stm-link {
@@ -173,6 +173,46 @@ BLOGS AND NEWS START HERE
   line-height: 18px;
 }
 
+.paging-navigation { text-align: center; }
+
+.container .hesperiden.tparrows:hover { background: #ff7634; }
+
+.container .pagination .page-numbers {
+  border: 1px solid #cfcfcf;
+  opacity: .5;
+}
+
+.container .pagination .page-numbers:hover {
+  border: 1px solid #000;
+  opacity: 1;
+}
+
+.container .pagination span.page-numbers { opacity: 1; }
+
+.container .pagination span.page-numbers:hover {
+  border: 1px solid #ff7634;
+  opacity: 1;
+}
+
+.stm-teachers .stm-teacher:hover .stm-teacher__info-content { background: #000; }
+
+main .widget_tag_cloud .tagcloud a:hover {
+  border-color: #ff7634 !important;
+  background: #ff7634;
+}
+
+.entry-summary a:hover {
+  color: #ff7634;
+  text-decoration: none;
+}
+
+.page-news-list-vc .stm-btn-big-container,
+.page-blogs .stm-btn-big-container { display: none; }
+
+.vc_wp_categories { display: none; }
+
+.page-blogs .entry-content > .vc_row { margin-bottom: 60px; }
+
 /*=================================================
 BLOGS AND NEWS ENDS HERE
 ====================================================*/
@@ -181,9 +221,32 @@ BLOGS AND NEWS ENDS HERE
 PROGRAMS STARTS HERE
 ====================================================*/
 
-.program-sections { padding-top: 45px; }
-.program-sections:last-child { padding-bottom: 45px; }
-.program-sections h2 { font-weight: 500; }
+/*.program-sections { padding-top: 45px; }*/
+.page-programs .entry-content > div:first-child { padding-top: 45px; }
+.page-programs .entry-content > div { padding-bottom: 45px; }
+
+/*.program-sections:last-child { padding-bottom: 45px; }*/
+.page-programs h2 { font-weight: 500; }
+
+
+.page-programs .stm-single-image img {
+  width: 350px;
+  height: 290px;
+}
+
+.overview-tab .stm-single-image img {
+  width: 350px;
+  height: 350px;
+}
+
+.page-programs .wpb_text_column a,
+.page-soundbite .wpb_text_column a { color: #ff7634; }
+
+.page-programs .wpb_text_column a:hover,
+.page-soundbite .wpb_text_column a:hover {
+  color: #000;
+  text-decoration: none;
+}
 
 /*=================================================
 PROGRAMS ENDS HERE
@@ -192,6 +255,9 @@ PROGRAMS ENDS HERE
 /*=================================================
 BOOTCAMPS STARTS HERE
 ====================================================*/
+
+.page-programs .stm-separator,
+.page-bootcamp .stm-separator { margin-bottom: 20px; }
 
 .page-bootcamp .bootcamp-image img {
   width: 410px;
@@ -211,25 +277,54 @@ BOOTCAMPS STARTS HERE
   height: 290px;
 }
 
-.page-bootcamp p {
+.page-bootcamp p,
+.page-soundbite p {
   margin-bottom: 15px;
   line-height: 22px;
 }
 
 .page-bootcamp .stm-separator { margin-bottom: 30px; }
+.page-bootcamp h5 { margin-bottom: 10px; }
+.page-bootcamp .stm-icon-box { margin-bottom: 10px; }
+
+.financial-aid .stm-link-container .stm-link {
+  padding: 0;
+  border: none !important;
+  background: transparent;
+  color: #ff7634;
+}
+
+.previous-camps a { color: #ff7634; }
+
+.previous-camps img { margin-bottom: 10px; }
+
+.financial-aid .stm-link-container .stm-link:hover,
+.previous-camps a:hover {
+  color: #000;
+  text-decoration: none;
+}
 
 /*=================================================
 BOOTCAMPS ENDS HERE
 ====================================================*/
 
 /*=================================================
+SOUNDBITE ENDS HERE
+====================================================*/
+
+.page-soundbite .stm-single-image-wrapper { margin: 0 0 15px 0 !important; }
+
+/*=================================================
+SOUNDBITE STARTS HERE
+====================================================*/
+
+
+/*=================================================
 MEDIA QUERIES START HERE
 ====================================================*/
 
 @media (max-width: 991px) and (min-width: 768px) {
-
   .top-bar_view-style_3 .top-bar__contact_address { display: table-cell !important; }
-
 }
 
 @media (max-width: 768px) {
@@ -261,6 +356,15 @@ MEDIA QUERIES START HERE
 }
 
 @media (max-width: 750px ) {
+
+  .page-soundbite .stm-single-image-wrapper { margin: 0 0 15px 0 !important; }
+
+  .stm-single-image-wrapper .stm-single-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .tp-bgimg { background-attachment: initial; }
 
   .page-bootcamp .bootcamp-image img {
     width: 100%;
@@ -300,7 +404,15 @@ MEDIA QUERIES START HERE
     line-height: 18px !important;
   }
 
-  h2 { text-align: center !important; }
+  h2,
+  h4 { text-align: center !important; }
+
+  .stm-vc-footer h4 { text-align: left !important; }
+
+  .page-bootcamp .previous-camps .stm-single-image_responsive img { margin-bottom: 10px !important; }
+
+  .previous-camps .wpb_content_element { margin-bottom: 20px; }
+
   h2 + .stm-separator { margin: 0 auto 30px !important; }
   .stm-separator__line { margin: 0 auto !important; }
   .vc_align_left { text-align: center !important; }
