@@ -34,6 +34,14 @@ HOME PAGE START HERE
 }
 /* Header Ends*/
 
+/* Banner Styling starts */
+.stm-page-head {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+/* Banner Styling Ends */
+
+
 /* Main Starts*/
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 300px !important; }
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 360px !important; }
@@ -239,11 +247,22 @@ PROGRAMS STARTS HERE
   height: 350px;
 }
 
+.page-history .stm-single-image img {
+  width: 100%;
+  height: auto;
+}
+
 .page-programs .wpb_text_column a,
-.page-soundbite .wpb_text_column a { color: #ff7634; }
+.page-soundbite .wpb_text_column a,
+.page-the-drum .wpb_text_column a,
+.page-go-fund .wpb_text_column a,
+.page-history .wpb_text_column a { color: #ff7634; }
 
 .page-programs .wpb_text_column a:hover,
-.page-soundbite .wpb_text_column a:hover {
+.page-soundbite .wpb_text_column a:hover,
+.page-the-drum .wpb_text_column a:hover,
+.page-go-fund .wpb_text_column a:hover,
+.page-history .wpb_text_column a:hover {
   color: #000;
   text-decoration: none;
 }
@@ -259,9 +278,9 @@ BOOTCAMPS STARTS HERE
 .page-programs .stm-separator,
 .page-bootcamp .stm-separator { margin-bottom: 20px; }
 
-.page-bootcamp .bootcamp-image img {
+.bootcamp-image img {
   width: 410px;
-  height: 648px;
+  height: 648px !important;
 }
 
 .page-bootcamp .overview-section-one img {
@@ -278,7 +297,10 @@ BOOTCAMPS STARTS HERE
 }
 
 .page-bootcamp p,
-.page-soundbite p {
+.page-soundbite p,
+.page-the-drum p,
+.page-go-fund p,
+.page-history p {
   margin-bottom: 15px;
   line-height: 22px;
 }
@@ -312,11 +334,35 @@ BOOTCAMPS ENDS HERE
 SOUNDBITE ENDS HERE
 ====================================================*/
 
-.page-soundbite .stm-single-image-wrapper { margin: 0 0 15px 0 !important; }
+.page-soundbite .soundbite-tabs .stm-single-image-wrapper { margin: 0 0 15px 0 !important; }
 
 /*=================================================
 SOUNDBITE STARTS HERE
 ====================================================*/
+
+/*=================================================
+GO FUND STARTS HERE
+====================================================*/
+
+.page-go-fund .go-fund-tabs img {
+  width: 350px;
+  height: 350px;
+}
+
+/*=================================================
+GO FUND ENDS HERE
+====================================================*/
+
+/*=================================================
+OUR HISTORY STARTS HERE
+====================================================*/
+
+.page-history p:first-child { margin-top: 20px; }
+
+/*=================================================
+OUR HISTORY ENDS HERE
+====================================================*/
+
 
 
 /*=================================================
@@ -328,6 +374,11 @@ MEDIA QUERIES START HERE
 }
 
 @media (max-width: 768px) {
+
+  .stm-single-image-wrapper .stm-single-image img {
+    width: 100%;
+    height: auto;
+  }
 
   .page-blogs .blogs-page { margin-bottom: 60px; }
 
@@ -356,6 +407,9 @@ MEDIA QUERIES START HERE
 }
 
 @media (max-width: 750px ) {
+
+
+  .page-history .stm-single-image-wrapper .stm-single-image img { margin-bottom: 0 !important; }
 
   .page-soundbite .stm-single-image-wrapper { margin: 0 0 15px 0 !important; }
 
