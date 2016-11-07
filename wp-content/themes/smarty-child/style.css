@@ -256,16 +256,22 @@ PROGRAMS STARTS HERE
 .page-soundbite .wpb_text_column a,
 .page-the-drum .wpb_text_column a,
 .page-go-fund .wpb_text_column a,
-.page-history .wpb_text_column a { color: #ff7634; }
+.page-history .wpb_text_column a,
+.page-news-list-vc .entry-summary a,
+.page-blogs .entry-summary a { color: #ff7634; }
 
 .page-programs .wpb_text_column a:hover,
 .page-soundbite .wpb_text_column a:hover,
 .page-the-drum .wpb_text_column a:hover,
 .page-go-fund .wpb_text_column a:hover,
-.page-history .wpb_text_column a:hover {
+.page-history .wpb_text_column a:hover,
+.page-news-list-vc .entry-summary a:hover,
+.page-blogs .entry-summary a:hover {
   color: #000;
   text-decoration: none;
 }
+
+.page-blogs .entry-meta li:last-child { display: none; }
 
 /*=================================================
 PROGRAMS ENDS HERE

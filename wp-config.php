@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'MgRebuild');
+define('DB_NAME', 'mgrebuild');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'mgrebuild');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'prdxn2015');
+define('DB_PASSWORD', 'Mgrprdxn@2016');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mgrebuild.db.4175062.hostedresource.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -78,6 +78,8 @@ $table_prefix  = 'mgrb_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
+
+define( 'DISALLOW_FILE_EDIT', true );
 
 /* That's all, stop editing! Happy blogging. */
 
