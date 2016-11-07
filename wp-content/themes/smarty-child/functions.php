@@ -84,3 +84,23 @@ function sk_body_class_for_pages( $classes ) {
 
 }
 
+//Customize logo on Dashboard login panel
+function my_custom_login_logo() {
+	echo '<style type="text/css">
+        .login h1 a {
+          width: 222px !important;
+          height: 49px !important;
+          background-image:url('.get_bloginfo('template_directory').'/assets/images/mgp_logo_black.png) !important;
+          background-size: cover;
+        }
+  </style>';
+}
+
+add_action('login_head', 'my_custom_login_logo');
+
+// FUNCTION FOR ADDING TITTLE ATTRIBUTE TO LOGO
+function my_login_url_title() {
+	return 'Marcus Graham Project';
+}
+
+add_filter('login_headertitle', 'my_login_url_title');
