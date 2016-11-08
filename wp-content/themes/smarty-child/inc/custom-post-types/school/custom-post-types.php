@@ -398,9 +398,9 @@ if( class_exists('STM_PostType') ) {
 			'rewrite' => 'stm-achievement'
 		),
 		'stm_teacher' => array(
-			'title' => esc_html__( 'Teacher', 'smarty' ),
-			'plural_title' => esc_html__( 'Teachers', 'smarty' ),
-			'rewrite' => 'teachers'
+			'title' => esc_html__( 'Alumni', 'smarty' ),
+			'plural_title' => esc_html__( 'Alumni', 'smarty' ),
+			'rewrite' => 'alumni-posts'
 		),
 		'stm_donation' => array(
 			'title' => esc_html__( 'Donation', 'smarty' ),
@@ -601,9 +601,9 @@ if( class_exists('STM_PostType') ) {
 					'rewrite' => 'meeting'
 				),
 				'stm_teacher' => array(
-					'title' => esc_html__( 'Teacher', 'smarty' ),
-					'plural_title' => esc_html__( 'Teachers', 'smarty' ),
-					'rewrite' => 'teachers'
+					'title' => esc_html__( 'Alumni', 'smarty' ),
+					'plural_title' => esc_html__( 'Alumni', 'smarty' ),
+					'rewrite' => 'alumni-posts'
 				),
 				'stm_donation' => array(
 					'title' => esc_html__( 'Donation', 'smarty' ),
