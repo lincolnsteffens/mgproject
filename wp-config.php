@@ -81,6 +81,8 @@ define('WP_DEBUG', false);
 
 define( 'DISALLOW_FILE_EDIT', true );
 
+define( 'DISALLOW_FILE_MODS',true);
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
