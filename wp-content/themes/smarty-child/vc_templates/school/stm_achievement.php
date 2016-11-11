@@ -68,7 +68,18 @@ $stm_carousel_id = uniqid('stm_carousel_');
 
 						<div class="stm-image stm-image_achievement stm-image_style-1">
 							<div class="stm-image__content">
-								<a class="stm-image__link stm-fancybox" href="<?php echo esc_url( $img_full[0] ); ?>"><?php echo wp_kses_post( $img['thumbnail'] ); ?></a>
+								<?php
+									$sponsorLink = get_field("cta_sponsor_link");
+									if($sponsorLink):?>
+										<a class="stm-image__link stm-fancybox" href="<?php echo $sponsorLink; ?>" target="_blank"><?php echo wp_kses_post( $img['thumbnail'] ); ?></a>
+
+									<?php
+									 else:
+											$abc = wp_kses_post( $img['thumbnail'] );
+
+									echo $abc;
+									endif;
+								?>
 							</div>
 						</div>
 

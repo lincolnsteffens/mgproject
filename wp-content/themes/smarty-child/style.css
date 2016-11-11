@@ -27,11 +27,14 @@ Text Domain: smarty
 HOME PAGE START HERE
 ====================================================*/
 
+a:active { text-decoration: none; }
+
 /* Header Starts*/
 .top-bar__content {
   min-height: auto !important;
   height: 50px !important;
 }
+
 /* Header Ends*/
 
 /* Banner Styling starts */
@@ -72,7 +75,7 @@ div.news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
 
 .news-blogs .vc_tta-panel-body { padding-top: 30px !important; }
 .entry-content .tabs-content { margin-top: 0 !important; }
-.tp-loop-wrap .tp-mask-wrap .tp-shape { background: rgba(1, 27, 58, .6) !important }
+.tp-loop-wrap .tp-mask-wrap .tp-shape { background: rgba(1, 27, 58, .4) !important }
 
 .slider-slides .btnBlue a,
 .stm-link {
@@ -91,6 +94,13 @@ div.news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
 .alumni .stm-link:hover,
 .news-blogs .stm-link:hover,
 .stm-link:hover { color: #ff7634; }
+
+
+.get-involved-grids img {
+	width: 255px;
+	height: 211px;
+}
+
 /* Main Ends*/
 
 /* Footer Starts*/
@@ -133,6 +143,28 @@ div.news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
   width: 278px;
   height: 59px;
 }
+
+.stm-vc-footer .subscribe-modal-launcher {
+  padding: 11px 17px;
+  border: 1px solid #fff;
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stm-vc-footer .subscribe-modal-launcher .fa-envelope-o { margin-right: 12px; }
+
+.stm-vc-footer .subscribe-modal-launcher .fa-envelope-o { font-weight: 700; }
+
+.stm-vc-footer .subscribe-modal-launcher:hover {
+  color: #ff7634;
+  border-color: #ff7634;
+  text-decoration: none;
+}
+
+.stm-vc-footer .social-copyrights .wpb_text_column p { font-size: 13px; }
+
 /* Footer Ends*/
 
 /*=================================================
@@ -229,13 +261,10 @@ BLOGS AND NEWS ENDS HERE
 PROGRAMS STARTS HERE
 ====================================================*/
 
-/*.program-sections { padding-top: 45px; }*/
 .page-programs .entry-content > div:first-child { padding-top: 45px; }
 .page-programs .entry-content > div { padding-bottom: 45px; }
 
-/*.program-sections:last-child { padding-bottom: 45px; }*/
 .page-programs h2 { font-weight: 500; }
-
 
 .page-programs .stm-single-image img {
   width: 350px;
@@ -306,7 +335,8 @@ BOOTCAMPS STARTS HERE
 .page-soundbite p,
 .page-the-drum p,
 .page-go-fund p,
-.page-history p {
+.page-history p,
+.post_view_single .wpb_wrapper p {
   margin-bottom: 15px;
   line-height: 22px;
 }
@@ -365,21 +395,106 @@ OUR HISTORY STARTS HERE
 
 .page-history p:first-child { margin-top: 20px; }
 
+.page .content { min-height: auto; }
+
 /*=================================================
 OUR HISTORY ENDS HERE
 ====================================================*/
 
+/*=================================================
+OUR PEOPLE STARTS HERE
+====================================================*/
 
+.page-our-people .stm-post .stm-post__thumbnail img {
+  width: 350px;
+  height: 236px;
+}
+
+.post_view_single .stm-single-image img {
+  width: 350px;
+  height: 350px;
+}
+
+/*=================================================
+OUR PEOPLE ENDS HERE
+====================================================*/
+
+/*=================================================
+CONTACT US STARTS HERE
+====================================================*/
+
+.page-contact-us form .stm-btn_outline {
+  color: #ff7634;
+  border-color: #ff7634;
+}
+
+/*=================================================
+CONTACT US ENDS HERE
+====================================================*/
+
+/*=================================================
+PARTNER STARTS HERE
+====================================================*/
+
+.page-partner .stm-image__content img {
+  width: 350px !important;
+  height: 200px !important;
+}
+
+.page-partner .stm-images-carousel__item .stm-image__content img {
+  padding: 30px;
+  border: 6px solid #000;
+  background: #fff;
+}
+
+.page-partner .stm-image_style-1 .stm-image__content {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.page-partner .sponsor { margin-bottom: 0 !important; }
+
+/*=================================================
+PARTNER ENDS HERE
+====================================================*/
 
 /*=================================================
 MEDIA QUERIES START HERE
 ====================================================*/
 
+@media (max-width: 1024px) {
+
+  .tp-bgimg { background-attachment: initial; }
+
+  .rs-background-video-layer iframe {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .header-holder .top-bar-mobile { border: none; }
+
+}
+
+
 @media (max-width: 991px) and (min-width: 768px) {
+
+  .stm-vc-footer .footer-image { width: 55.666667%; }
+  .stm-vc-footer .social-copyrights { width: 43.333333%; }
   .top-bar_view-style_3 .top-bar__contact_address { display: table-cell !important; }
+
 }
 
 @media (max-width: 768px) {
+
+  .stm-vc-footer .footer-image { margin-bottom: 30px; }
+
+  .stm-vc-footer .subscribe-modal-launcher-holder {
+    margin-left: 3px;
+    float: none;
+  }
+
+  .tp-bgimg { background-attachment: initial; }
 
   .stm-single-image-wrapper .stm-single-image img {
     width: 100%;
@@ -414,6 +529,7 @@ MEDIA QUERIES START HERE
 
 @media (max-width: 750px ) {
 
+  .stm-vc-footer .subscribe-modal-launcher { font-size: 14px; }
 
   .page-history .stm-single-image-wrapper .stm-single-image img { margin-bottom: 0 !important; }
 
@@ -476,7 +592,6 @@ MEDIA QUERIES START HERE
   h2 + .stm-separator { margin: 0 auto 30px !important; }
   .stm-separator__line { margin: 0 auto !important; }
   .vc_align_left { text-align: center !important; }
-  .get-involved-grids .wpb_column:last-child .stm-link-container { margin-bottom: 50px; }
   .stm-single-image_responsive img { margin: 0 auto 30px !important; }
   .news .vc_tta-panel-body { margin-bottom: 20px !important; }
   .stm_teacher .stm-spacing { display: none; }
@@ -485,6 +600,7 @@ MEDIA QUERIES START HERE
   .stm_teacher .vc_row:first-child { padding-top: 0 !important; }
   .tabs-content { padding-top: 35px !important; }
   h4 { margin-top: 40px !important; }
+  .stm-vc-footer h4 { margin-top: 25px !important; }
 
   #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 30px !important; }
   #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 80px !important; }
