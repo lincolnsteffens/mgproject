@@ -101,6 +101,8 @@ div.news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
 	height: 211px;
 }
 
+.news-blogs .stm-posts { margin-bottom: 30px; }
+
 /* Main Ends*/
 
 /* Footer Starts*/
@@ -164,6 +166,26 @@ div.news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
 }
 
 .stm-vc-footer .social-copyrights .wpb_text_column p { font-size: 13px; }
+
+.stm-vc-footer .vc_icon_element {
+  margin-bottom: 0;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.stm-vc-footer .vc_icon_element-inner {
+  border-radius: 6px;
+  margin-left: 6px;
+  background: #fff;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-md {
+  max-width: auto !important;
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.stm-vc-footer .vc_icon_element :hover { opacity: .7; }
 
 /* Footer Ends*/
 
@@ -252,6 +274,9 @@ main .widget_tag_cloud .tagcloud a:hover {
 .vc_wp_categories { display: none; }
 
 .page-blogs .entry-content > .vc_row { margin-bottom: 60px; }
+
+.news-blogs .stm-posts .entry-summary a { color: #ff7634; }
+.news-blogs .stm-posts .entry-summary a:hover { color: #000; }
 
 /*=================================================
 BLOGS AND NEWS ENDS HERE
