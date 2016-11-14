@@ -23,5 +23,25 @@ jq( window ).on( 'load', function () {
 
 	jq( '.stm-posts .entry-title a, .stm-posts .entry-thumbnail a, .stm-posts .entry-meta a' ).removeAttr( 'href' );
 
+// URL CHANGING FUNCTIONALITY
+
+	var currentUrl,
+			newUrl;
+
+	var urlChanger = function( currentUrl, newUrl ){
+		setTimeout( function(){
+			currentUrl = window.location.href;
+			newUrl = currentUrl.replace(/[#].*$/, '')
+			history.pushState("", "", newUrl);
+		}, 500);
+	}
+
+	jq('a').on('click', function() {
+
+		urlChanger(currentUrl, newUrl);
+
+	});
+
+	urlChanger(currentUrl, newUrl);
 
 });
