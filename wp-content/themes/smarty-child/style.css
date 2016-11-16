@@ -216,6 +216,15 @@ ALUMNI ENDS HERE
 BLOGS AND NEWS START HERE
 ====================================================*/
 
+.blogs-page,
+.page-news-list-vc .news-page { padding-top: 50px !important; }
+
+.page-blogs .entry-thumbnail-container .entry-thumbnail img,
+.page-news-list-vc .entry-thumbnail-container .entry-thumbnail img {
+  width: 350px;
+  height: 236px;
+}
+
 .page-news-list-vc .entry-meta li:last-child { display: none; }
 .blogs-page { padding-top: 80px; }
 .stm-posts .entry-details .entry-summary { line-height: 18px; }
@@ -461,17 +470,6 @@ CONTACT US ENDS HERE
 PARTNER STARTS HERE
 ====================================================*/
 
-.page-partner .stm-image__content img {
-  width: 350px !important;
-  height: 200px !important;
-}
-
-.page-partner .stm-images-carousel__item .stm-image__content img {
-  padding: 30px;
-  border: 6px solid #000;
-  background: #fff;
-}
-
 .page-partner .stm-image_style-1 .stm-image__content {
   padding: 0;
   border: none;
@@ -479,6 +477,8 @@ PARTNER STARTS HERE
 }
 
 .page-partner .sponsor { margin-bottom: 0 !important; }
+
+.page-partner .stm-image__link { border: 0; }
 
 /*=================================================
 PARTNER ENDS HERE
@@ -501,7 +501,6 @@ MEDIA QUERIES START HERE
 
 }
 
-
 @media (max-width: 991px) and (min-width: 768px) {
 
   .stm-vc-footer .footer-image { width: 55.666667%; }
@@ -511,6 +510,20 @@ MEDIA QUERIES START HERE
 }
 
 @media (max-width: 768px) {
+
+  .tp-rightarrow,
+  .tp-leftarrow {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .container .hesperiden.tparrows:hover { background: rgba(0,0,0,0.5); }
+
+  .page-blogs .entry-thumbnail-container .entry-thumbnail img,
+  .page-news-list-vc .entry-thumbnail-container .entry-thumbnail img {
+    width: auto;
+    height: auto;
+  }
 
   .stm-vc-footer .footer-image { margin-bottom: 30px; }
 
@@ -553,6 +566,10 @@ MEDIA QUERIES START HERE
 }
 
 @media (max-width: 750px ) {
+
+  .news-blogs .stm-link-container,
+  .alumni-section .stm-link-container,
+  .history-section .stm-link-container { text-align: center; }
 
   .stm-vc-footer .subscribe-modal-launcher { font-size: 14px; }
 

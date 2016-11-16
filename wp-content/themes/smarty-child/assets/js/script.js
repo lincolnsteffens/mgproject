@@ -23,7 +23,7 @@ jq( window ).on( 'load', function () {
 
 	jq( '.stm-posts .entry-title a, .stm-posts .entry-thumbnail a, .stm-posts .entry-meta a' ).removeAttr( 'href' );
 
-// URL CHANGING FUNCTIONALITY
+	// URL CHANGING FUNCTIONALITY
 
 	var currentUrl,
 			newUrl;
