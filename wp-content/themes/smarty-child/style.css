@@ -180,7 +180,6 @@ div.news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
 }
 
 .vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-md {
-  max-width: auto !important;
   width: 28px !important;
   height: 28px !important;
 }
@@ -279,11 +278,8 @@ main .widget_tag_cloud .tagcloud a:hover {
 
 .page-news-list-vc .stm-btn-big-container,
 .page-blogs .stm-btn-big-container { display: none; }
-
 .vc_wp_categories { display: none; }
-
 .page-blogs .entry-content > .vc_row { margin-bottom: 60px; }
-
 .news-blogs .stm-posts .entry-summary a { color: #ff7634; }
 .news-blogs .stm-posts .entry-summary a:hover { color: #000; }
 
@@ -297,7 +293,6 @@ PROGRAMS STARTS HERE
 
 .page-programs .entry-content > div:first-child { padding-top: 45px; }
 .page-programs .entry-content > div { padding-bottom: 45px; }
-
 .page-programs h2 { font-weight: 500; }
 
 .page-programs .stm-single-image img {
@@ -554,9 +549,7 @@ MEDIA QUERIES START HERE
   }
 
   .wpb_wrapper .vc_tta-tabs_style-1.vc_tta-tabs.vc_general .vc_tta-panel-body { padding-bottom: 0 !important; }
-
   .get-involved > .vc_column-inner { padding-top: 0 !important; }
-
   .stm-teacher__photo img { margin: 0 auto !important; }
 
 }
@@ -572,9 +565,7 @@ MEDIA QUERIES START HERE
   .history-section .stm-link-container { text-align: center; }
 
   .stm-vc-footer .subscribe-modal-launcher { font-size: 14px; }
-
   .page-history .stm-single-image-wrapper .stm-single-image img { margin-bottom: 0 !important; }
-
   .page-soundbite .stm-single-image-wrapper { margin: 0 0 15px 0 !important; }
 
   .stm-single-image-wrapper .stm-single-image img {
