@@ -97,7 +97,7 @@
               <?php
               $readmoreText = get_field("cta_text");
               $readmoreLink = get_field("cta_link");
-              if (in_category( 'News' ) || in_category( 'Blogs' ) ) :?>
+              if (in_category( 'News' ) ) :?>
               <a href="<?php echo $readmoreLink; ?>"><?php echo $readmoreText;?></a>
               <?php endif; ?>
 						</div>

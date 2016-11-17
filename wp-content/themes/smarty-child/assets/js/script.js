@@ -5,43 +5,43 @@ jq( window ).on( 'load', function () {
 
 	// Read More functionality
 
-	if ( jq( 'body' ).hasClass( 'page-news-list-vc' ) || jq( 'body' ).hasClass( 'archive' ) ) {
+  if ( jq( 'body' ).hasClass( 'page-news-list-vc' ) || jq( 'body' ).hasClass( 'archive' ) ) {
 
-		var base_url = window.location.host;
+    var base_url = window.location.host;
 
-		jq( '.stm-posts .entry-summary a' ).each( function( ) {
-			var readmoreUrl = jq( this ).attr( 'href' );
+    jq( '.stm-posts .entry-summary a' ).each( function( ) {
+      var readmoreUrl = jq( this ).attr( 'href' );
 
-			if( readmoreUrl.indexOf( base_url ) >= 0 ) {} else {
-				jq( this ).attr( 'target', '_blank' );
-			}
+      if( readmoreUrl.indexOf( base_url ) >= 0 ) {} else {
+        jq( this ).attr( 'target', '_blank' );
+      }
 
-		});
-	}
+    });
+  }
 
-	// Removing Title Href functionality
+  // Removing Title Href functionality
 
-	jq( '.stm-posts .entry-title a, .stm-posts .entry-thumbnail a, .stm-posts .entry-meta a' ).removeAttr( 'href' );
+  if ( jq( 'div' ).hasClass( 'category-news' )) {
+    jq( '.stm-posts .category-news .entry-title a, .stm-posts .category-news .entry-thumbnail a, .stm-posts .category-news .entry-meta a' ).removeAttr( 'href' );
+  }
 
-	// URL CHANGING FUNCTIONALITY
+  // URL CHANGING FUNCTIONALITY
 
-	var currentUrl,
-			newUrl;
+  var currentUrl,
+      newUrl;
 
-	var urlChanger = function( currentUrl, newUrl ){
-		setTimeout( function(){
-			currentUrl = window.location.href;
-			newUrl = currentUrl.replace(/[#].*$/, '')
-			history.pushState("", "", newUrl);
-		}, 500);
-	}
+  var urlChanger = function( currentUrl, newUrl ){
+    setTimeout( function(){
+      currentUrl = window.location.href;
+      newUrl = currentUrl.replace( /[#].*$/, '' );
+      history.pushState( "", "", newUrl );
+    }, 500);
+  }
 
-	jq('a').on('click', function() {
+  jq( 'a' ).on( 'click', function() {
+    urlChanger( currentUrl, newUrl );
+  });
 
-		urlChanger(currentUrl, newUrl);
-
-	});
-
-	urlChanger(currentUrl, newUrl);
+  urlChanger( currentUrl, newUrl );
 
 });
