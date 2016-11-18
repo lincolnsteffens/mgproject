@@ -1,3 +1,4 @@
 <?php
-get_template_part( 'parts/'.smarty_get_university_mode().'/page', 'error' );
+header('HTTP/1.1 404 Not Found');
+header('location: http://marcusgrahamproject.org/mg-rebuild/404-page/');
 ?>
