@@ -2,20 +2,15 @@
 var jq = jQuery;
 
 jq( window ).on( 'load', function () {
-
 	// Read More functionality
 
-  if ( jq( 'body' ).hasClass( 'page-news-list-vc' ) || jq( 'body' ).hasClass( 'archive' ) ) {
-
+  if ( jq( 'body' ).hasClass( 'page-news-list-vc' ) || jq( 'body' ).hasClass( 'archive' ) || jq( 'body' ).hasClass( 'home' )) {
     var base_url = window.location.host;
-
     jq( '.stm-posts .entry-summary a' ).each( function( ) {
       var readmoreUrl = jq( this ).attr( 'href' );
-
-      if( readmoreUrl.indexOf( base_url ) >= 0 ) {} else {
+      if( readmoreUrl.indexOf( base_url ) == -1 ) {
         jq( this ).attr( 'target', '_blank' );
       }
-
     });
   }
 
@@ -43,5 +38,4 @@ jq( window ).on( 'load', function () {
   });
 
   urlChanger( currentUrl, newUrl );
-
 });

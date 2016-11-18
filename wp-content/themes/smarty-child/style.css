@@ -34,7 +34,6 @@ a:active { text-decoration: none; }
   min-height: auto !important;
   height: 50px !important;
 }
-
 /* Header Ends*/
 
 /* Banner Styling starts */
@@ -44,7 +43,6 @@ a:active { text-decoration: none; }
 }
 /* Banner Styling Ends */
 
-
 /* Main Starts*/
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 300px !important; }
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 360px !important; }
@@ -53,23 +51,23 @@ a:active { text-decoration: none; }
 h2.stm-title,
 h4.stm-title { margin-bottom: 17px; } /*Used for being specific*/
 
-div.tabs-content { padding-bottom: 7px !important; } /*Used for being specific*/
+.entry-content .tabs-content { padding-bottom: 7px !important; } /*Used for being specific*/
 .parent-tabs { display: none; }
 .tabs-content .vc_general { background-color: transparent !important; }
 .tabs-content .vc_tta-panel-body { padding-top: 40px !important; }
 .tp-bgimg { background-attachment: fixed; }
-div.alumni { margin-bottom: 0 !important; } /*Used for being specific*/
-div.news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
+.entry-content .alumni { margin-bottom: 0 !important; } /*Used for being specific*/
+.entry-content .news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
 
 .stm-link {
   padding: 10px 20px;
-  border: 2px solid #00aaff;
+  border: 2px solid #0af;
   display: inline-block;
 }
 
 .stm-link:hover {
   color: #fff;
-  background-color: #00aaff;
+  background-color: #0af;
   text-decoration: none;
 }
 
@@ -94,7 +92,6 @@ div.news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
 .alumni .stm-link:hover,
 .news-blogs .stm-link:hover,
 .stm-link:hover { color: #ff7634; }
-
 
 .get-involved-grids img {
 	width: 255px;
@@ -185,7 +182,6 @@ div.news-blogs { padding-bottom: 40px !important; } /*Used for being specific*/
 }
 
 .stm-vc-footer .vc_icon_element :hover { opacity: .7; }
-
 /* Footer Ends*/
 
 /*=================================================
@@ -480,6 +476,16 @@ PARTNER ENDS HERE
 ====================================================*/
 
 /*=================================================
+404 PAGE STARTS HERE
+====================================================*/
+
+.page-404-page img { margin: 0 auto; }
+
+/*=================================================
+404 PAGE ENDS HERE
+====================================================*/
+
+/*=================================================
 MEDIA QUERIES START HERE
 ====================================================*/
 
@@ -512,7 +518,7 @@ MEDIA QUERIES START HERE
     visibility: visible !important;
   }
 
-  .container .hesperiden.tparrows:hover { background: rgba(0,0,0,0.5); }
+  .container .hesperiden.tparrows:hover { background: rgba(0,0,0,.5); }
 
   .page-blogs .entry-thumbnail-container .entry-thumbnail img,
   .page-news-list-vc .entry-thumbnail-container .entry-thumbnail img {
@@ -524,7 +530,7 @@ MEDIA QUERIES START HERE
 
   .stm-vc-footer .subscribe-modal-launcher-holder {
     margin-left: 3px;
-    float: none;
+    float: none; /*to override themes property*/
   }
 
   .tp-bgimg { background-attachment: initial; }
@@ -540,12 +546,12 @@ MEDIA QUERIES START HERE
 
   .page-blogs .blogs-content {
     width: 100%;
-    float: none;
+    float: none; /*to override themes property*/
   }
 
   .stm-link:hover {
     background-color: #fff;
-    color: #00aaff;
+    color: #0af;
   }
 
   .wpb_wrapper .vc_tta-tabs_style-1.vc_tta-tabs.vc_general .vc_tta-panel-body { padding-bottom: 0 !important; }
@@ -568,9 +574,10 @@ MEDIA QUERIES START HERE
   .page-history .stm-single-image-wrapper .stm-single-image img { margin-bottom: 0 !important; }
   .page-soundbite .stm-single-image-wrapper { margin: 0 0 15px 0 !important; }
 
-  .stm-single-image-wrapper .stm-single-image img {
+  .stm-single-image-wrapper .stm-single-image img,
+  .bootcamp-image .stm-single-image-wrapper .stm-single-image img {
     width: 100%;
-    height: auto;
+    height: auto !important;
   }
 
   .tp-bgimg { background-attachment: initial; }
@@ -580,7 +587,11 @@ MEDIA QUERIES START HERE
     height: auto;
   }
 
-  .page-bootcamp .stm-single-image-wrapper { margin-right: 0 !important; }
+  .page-bootcamp .stm-single-image-wrapper,
+  .page-go-fund .stm-single-image-wrapper,
+  .page-soundbite .stm-single-image-wrapper,
+  .page-the-drum .stm-single-image-wrapper { margin-right: 0 !important; }
+
   .page-bootcamp .stm-single-image_responsive img { margin-bottom: 0 !important; }
   .overview-section-one { margin-bottom: 25px; }
   .page-bootcamp .assignment-paragraph { margin-bottom: 0; }
@@ -617,9 +628,7 @@ MEDIA QUERIES START HERE
   h4 { text-align: center !important; }
 
   .stm-vc-footer h4 { text-align: left !important; }
-
   .page-bootcamp .previous-camps .stm-single-image_responsive img { margin-bottom: 10px !important; }
-
   .previous-camps .wpb_content_element { margin-bottom: 20px; }
 
   h2 + .stm-separator { margin: 0 auto 30px !important; }
@@ -638,9 +647,7 @@ MEDIA QUERIES START HERE
   #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 30px !important; }
   #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 80px !important; }
   #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 200px !important; }
-
   .footer-bottom .vc_align_left { text-align: left !important; }
-
   .stm-vc-footer .stm-separator__line { margin: 0 0 25px !important; }
 
 }
