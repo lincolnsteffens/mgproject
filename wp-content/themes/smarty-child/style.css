@@ -37,10 +37,7 @@ a:active { text-decoration: none; }
 /* Header Ends*/
 
 /* Banner Styling starts */
-.stm-page-head {
-  background-size: cover !important;
-  background-position: center center !important;
-}
+.stm-page-head { background-size: cover !important; }
 /* Banner Styling Ends */
 
 /* Main Starts*/
