@@ -38,6 +38,9 @@ a:active { text-decoration: none; }
 
 /* Banner Styling starts */
 .stm-page-head { background-size: cover !important; }
+
+.stm-page-head_color_white .stm-page-head__overlay { background: rgba(1, 27, 58, .4) !important; }
+
 /* Banner Styling Ends */
 
 /* Main Starts*/
@@ -142,7 +145,7 @@ h4.stm-title { margin-bottom: 17px; } /*Used for being specific*/
 
 .stm-vc-footer .subscribe-modal-launcher {
   padding: 11px 17px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   display: inline-block;
   color: #fff;
   font-size: 18px;
@@ -188,8 +191,6 @@ HOME PAGE ENDS HERE
 /*=================================================
 ALUMNI START HERE
 ====================================================*/
-
-.stm-page-head_color_white .stm-page-head__overlay { background: transparent !important; }
 
 .stm-page-head__content .stm-page-head__title { margin-bottom: 10px; }
 
@@ -468,8 +469,33 @@ PARTNER STARTS HERE
 
 .page-partner .stm-image__link { border: 0; }
 
+.stm-btn-download-container .stm-btn-download_white {
+  background: #fff;
+  border: 1px solid #ff7635;
+}
+
+.stm-btn-download-container { margin-bottom: 20px; }
+
+.stm-btn-download-container .stm-btn-download_white:hover { background: #ff7635; }
+
+.stm-btn-download-container .stm-btn-download_white .stm-btn-download__subtext {
+  color: #000;
+  font-size: 16px;
+  font-style: initial;
+}
+
 /*=================================================
 PARTNER ENDS HERE
+====================================================*/
+
+/*=================================================
+VOLUNTEERS STARTS HERE
+====================================================*/
+
+.page-volunteer .stm-single-image img { width: 100%; }
+
+/*=================================================
+VOLUNTEERS ENDS HERE
 ====================================================*/
 
 /*=================================================
