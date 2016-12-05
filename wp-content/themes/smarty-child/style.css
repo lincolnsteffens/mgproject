@@ -182,6 +182,26 @@ h4.stm-title { margin-bottom: 17px; } /*Used for being specific*/
 }
 
 .stm-vc-footer .vc_icon_element :hover { opacity: .7; }
+
+.donate-cta-sticky {
+  border-color: #ff7635;
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  z-index: 50;
+  background: #ff7635;
+}
+
+.donate-cta-sticky a {
+  border-color: #ff7635 !important;
+  color: #000 !important;
+  background: #ff7635 !important;
+}
+
+.donate-cta-sticky a:hover {
+  border-color: #ff7635 !important;
+  background: transparent !important;
+}
 /* Footer Ends*/
 
 /*=================================================
@@ -437,6 +457,8 @@ OUR PEOPLE STARTS HERE
   width: 350px;
   height: 350px;
 }
+
+.page-our-people .entry-meta { display: none; }
 
 /*=================================================
 OUR PEOPLE ENDS HERE
