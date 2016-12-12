@@ -38,4 +38,14 @@ jq( window ).on( 'load', function () {
   });
 
   urlChanger( currentUrl, newUrl );
+
+  // Triggering paginations parent tab
+
+  jq('.page-numbers').on('click', function() {
+    var anchorText = jq(this).text();
+    var textz = jq(this).parent('.vc_tta-panels-container');
+    // .siblings('.vc_tta-tabs-container')
+    // .children('a').text();
+    console.log(textz);
+  });
 });
