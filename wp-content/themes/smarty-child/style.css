@@ -182,6 +182,26 @@ h4.stm-title { margin-bottom: 17px; } /*Used for being specific*/
 }
 
 .stm-vc-footer .vc_icon_element :hover { opacity: .7; }
+
+.donate-cta-sticky {
+  border-color: #ff7635;
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  z-index: 50;
+  background: #ff7635;
+}
+
+.donate-cta-sticky a {
+  border-color: #ff7635 !important;
+  color: #000 !important;
+  background: #ff7635 !important;
+}
+
+.donate-cta-sticky a:hover {
+  border-color: #ff7635 !important;
+  background: transparent !important;
+}
 /* Footer Ends*/
 
 /*=================================================
@@ -428,6 +448,24 @@ OUR HISTORY ENDS HERE
 OUR PEOPLE STARTS HERE
 ====================================================*/
 
+.category-people .entry-title,
+.category-ambassadors .entry-title,
+.category-past-board-members .entry-title,
+.category-board-of-directors .entry-title,
+.category-advisory-board .entry-title { margin-top: 0 !important; }
+
+.category-people .entry-date,
+.category-ambassadors .entry-date,
+.category-past-board-members .entry-date,
+.category-board-of-directors .entry-date,
+.category-advisory-board .entry-date { display: none !important; }
+
+.category-people .entry-header__heading,
+.category-ambassadors .entry-header__heading,
+.category-past-board-members .entry-header__heading,
+.category-board-of-directors .entry-header__heading,
+.category-advisory-board .entry-header__heading { padding-left: 0 !important; }
+
 .page-our-people .stm-post .stm-post__thumbnail img {
   width: 350px;
   height: 236px;
@@ -437,6 +475,8 @@ OUR PEOPLE STARTS HERE
   width: 350px;
   height: 350px;
 }
+
+.page-our-people .entry-meta { display: none; }
 
 /*=================================================
 OUR PEOPLE ENDS HERE
