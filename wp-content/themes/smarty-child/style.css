@@ -668,6 +668,22 @@ MEDIA QUERIES START HERE
 
   /***Our page***/
 
+  .page-our-people .vc_tta.vc_tta-tabs .vc_tta-tabs-container,
+  .page-our-people .vc_tta.vc_tta-tabs .vc_tta-tabs-container .vc_tta-tab { 
+    width: 100%;
+    display: block;
+  }
+
+  .page-our-people .vc_tta.vc_tta-tabs .vc_tta-tabs-container .vc_tta-tab { margin-bottom: 10px; }
+
+  .page-our-people .vc_tta.vc_tta-tabs .vc_tta-tabs-container .vc_tta-tab > a:before { content: none; }
+
+   .page-our-people .vc_tta-tabs_style-1.vc_tta-tabs .vc_tta-tabs-container { margin: 0!important; }
+
+  .page-our-people .vc_tta.vc_tta-tabs .vc_tta-tabs-container .vc_tta-tab.vc_active > a { background: #ff7634; }
+
+  .page-our-people .wpb_wrapper .vc_tta-panel-title { display: none; }
+
   .page-our-people .post_view_list .entry-thumbnail img {
     width: 100%;
     height: auto;
