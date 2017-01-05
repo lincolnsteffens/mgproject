@@ -48,4 +48,11 @@ jq( window ).on( 'load', function () {
     // .children('a').text();
     console.log(textz);
   });
+
+  jq('.page-our-people .vc_tta.vc_tta-tabs .vc_tta-tabs-container .vc_tta-tab > a').click(function() {
+    jq('html,body').animate({
+        scrollTop: jq('.page-our-people .vc_tta-panels-container').offset().top},
+        'slow');
+});
+
 });
