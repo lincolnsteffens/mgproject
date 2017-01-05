@@ -484,6 +484,8 @@ OUR PEOPLE STARTS HERE
     display: inline-block;
 }
 
+.page-our-people .post_view_list:last-child { margin-bottom: 30px; }
+
 .page-our-people .stm-posts > div:nth-of-type(3n+3) { margin-right: 0; }
 
 .page-our-people .post_view_list .entry-thumbnail { width: 250px; }
@@ -576,6 +578,12 @@ VOLUNTEERS ENDS HERE
 MEDIA QUERIES START HERE
 ====================================================*/
 
+@media (max-width: 1200px) and (min-width: 1024px) {
+  .page-our-people .post_view_list .entry-details { padding: 15px 0 15px 15px; }
+
+  .post_view_list .entry-title a { font-size: 16px; }
+}
+
 @media (max-width: 1024px) {
 
   .tp-bgimg { background-attachment: initial; }
@@ -597,6 +605,8 @@ MEDIA QUERIES START HERE
   .page-our-people .stm-posts > div:nth-of-type(3n+3) { margin-right: 30px; }
 
   .page-our-people .stm-posts > div:nth-of-type(2n) { margin-right: 0; }
+
+  .page-our-people .stm-posts > div:last-of-type { margin-bottom: 30px; }
 
 }
 
@@ -658,12 +668,6 @@ MEDIA QUERIES START HERE
 
   /***Our page***/
 
-  .page-our-people .post_view_list,
-  .page-our-people .stm-posts > div:nth-of-type(2n) {
-    width: 100%;
-    margin-right: 0;
-  }
-
   .page-our-people .post_view_list .entry-thumbnail img {
     width: 100%;
     height: auto;
@@ -673,11 +677,23 @@ MEDIA QUERIES START HERE
 
 }
 
-@media (max-width: 750px )  and ( orientation: landscape ){
+@media (max-width: 750px )  and ( orientation: landscape ) {
   .stm-teacher .stm-teacher__info { padding: 0 30%;  }
+
+  .page-our-people .post_view_list,
+  .page-our-people .stm-posts > div:nth-of-type(2n) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 750px ) {
+  
+  .page-our-people .post_view_list,
+  .page-our-people .stm-posts > div:nth-of-type(2n) {
+    width: 100%;
+    margin-right: 0;
+  }
 
   .news-blogs .stm-link-container,
   .alumni-section .stm-link-container,
