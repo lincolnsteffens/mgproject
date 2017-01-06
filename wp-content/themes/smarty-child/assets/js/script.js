@@ -1,5 +1,7 @@
 
 var jq = jQuery;
+var width = jq(window).width();
+console.log(width);
 
 jq( window ).on( 'load', function () {
 	// Read More functionality
@@ -49,10 +51,22 @@ jq( window ).on( 'load', function () {
     console.log(textz);
   });
 
-  jq('.page-our-people .vc_tta.vc_tta-tabs .vc_tta-tabs-container .vc_tta-tab > a').click(function() {
-    jq('html,body').animate({
+  if(width < 768) {
+    jq('.page-our-people .vc_tta.vc_tta-tabs .vc_tta-tabs-container .vc_tta-tab > a').click(function() {
+      jq('html,body').animate({
         scrollTop: jq('.page-our-people .vc_tta-panels-container').offset().top},
         'slow');
+  });
+  }
 });
 
+jq( window ).on( "orientationchange", function( event ) {
+  width = jq(window).width();
+  if(width < 768) {
+    jq('.page-our-people .vc_tta.vc_tta-tabs .vc_tta-tabs-container .vc_tta-tab > a').click(function() {
+      jq('html,body').animate({
+        scrollTop: jq('.page-our-people .vc_tta-panels-container').offset().top},
+        'slow');
+  });
+  }
 });
