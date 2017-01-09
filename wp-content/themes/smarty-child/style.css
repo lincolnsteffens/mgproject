@@ -296,6 +296,15 @@ main .widget_tag_cloud .tagcloud a:hover {
 .page-blogs .entry-content > .vc_row { margin-bottom: 60px; }
 .news-blogs .stm-posts .entry-summary a { color: #ff7634; }
 .news-blogs .stm-posts .entry-summary a:hover { color: #000; }
+.page-blogs .stm-btn-download_white .stm-btn-download__text,
+.page-blogs .stm-btn-download-container .stm-btn-download_white .stm-btn-download__subtext { font-size: 15px; }
+
+.page-blogs .stm-btn-download { 
+  padding: 16px 14px;
+  white-space: normal;
+}
+
+
 
 /*=================================================
 BLOGS AND NEWS ENDS HERE
