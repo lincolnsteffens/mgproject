@@ -202,6 +202,24 @@ h4.stm-title { margin-bottom: 17px; } /*Used for being specific*/
   border-color: #ff7635 !important;
   background: transparent !important;
 }
+
+/***Back to top***/
+
+.back-to-top { 
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+ .back-show { 
+  visibility: visible;
+  opacity: 1;
+}
+
+.stm-vc-footer .back-to-top > div { background: transparent; }
+
 /* Footer Ends*/
 
 /*=================================================
