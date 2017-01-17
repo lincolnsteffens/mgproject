@@ -29,6 +29,23 @@ HOME PAGE START HERE
 
 a:active { text-decoration: none; }
 
+
+/*Donate CTA*/
+
+.header_view-style_3 .stm-nav__menu_type_header > .menu-item.menu-item-3349 > a:after { border: none; }
+
+.stm-nav__menu_type_header .menu-item.menu-item-3349 a {
+  line-height: 51px;
+  height: auto;
+  padding: 0 24px;
+  border: 2px solid #ff7634;
+  border-radius: 3px;
+  background: #ff7634
+}
+
+.stm-nav__menu_type_header .menu-item.menu-item-3349 a:hover { background: transparent; }
+
+
 /* Header Starts*/
 .top-bar__content {
   min-height: auto !important;
@@ -47,6 +64,10 @@ a:active { text-decoration: none; }
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 300px !important; }
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 360px !important; }
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 470px !important; }
+
+
+/*Video controls*/
+.rs-background-video-layer { display: none; }
 
 h2.stm-title,
 h4.stm-title { margin-bottom: 17px; } /*Used for being specific*/
@@ -207,6 +228,7 @@ h4.stm-title { margin-bottom: 17px; } /*Used for being specific*/
 
 .back-to-top { 
   position: fixed;
+  z-index: 9999;
   bottom: 40px;
   right: 20px;
   visibility: hidden;
@@ -649,6 +671,7 @@ MEDIA QUERIES START HERE
 
   .tp-rightarrow,
   .tp-leftarrow {
+    display: inline-block !important;
     opacity: 1 !important;
     visibility: visible !important;
   }
@@ -822,6 +845,10 @@ MEDIA QUERIES START HERE
   .footer-bottom .vc_align_left { text-align: left !important; }
   .stm-vc-footer .stm-separator__line { margin: 0 0 25px !important; }
 
+}
+
+@media (max-width: 495px) { 
+  #rev_slider_3_1_wrapper .tp-revslider-mainul > li > div:nth-of-type(3) .tp-caption { font-size: 24px !important; }
 }
 
 
