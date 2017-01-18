@@ -239,8 +239,19 @@ h4.stm-title { margin-bottom: 17px; } /*Used for being specific*/
   background: transparent !important;
 }
 
-/***Back to top***/
+.page .stm-btn_blue.stm-btn_outline { 
+  background: #ff7634;
+  border-color: #ff7634;
+  color: #fff;
+}
 
+.page .stm-btn_blue.stm-btn_outline:hover {
+  background: transparent;
+  color: #ff7634;
+  border-color: #ff7634;
+}
+
+/***Back to top***/
 .back-to-top { 
   position: fixed;
   z-index: 9999;
