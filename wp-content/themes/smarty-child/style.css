@@ -36,7 +36,7 @@ a:active { text-decoration: none; }
 
 .stm-nav__menu_type_header .menu-item.menu-item-3349 a {
   height: auto;
-  padding: 0 24px;
+  padding: 0 11px;
   border: 2px solid #ff7634;
   border-radius: 3px;
   background: #ff7634;
@@ -51,6 +51,7 @@ a:active { text-decoration: none; }
   min-height: auto !important;
   height: 50px !important;
 }
+
 /* Header Ends*/
 
 /* Banner Styling starts */
@@ -60,14 +61,28 @@ a:active { text-decoration: none; }
 
 /* Banner Styling Ends */
 
+
+/*Slider text adjustment*/
+#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) {
+  width: 100%;
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+
+#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) .tp-mask-wrap,
+#rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) .tp-loop-wrap { width: 100% !important; }
+
+#rev_slider_3_1_wrapper .tp-revslider-mainul > li > div:nth-of-type(3) .tp-caption {
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+
 /* Main Starts*/
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 300px !important; }
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(4) { top: 360px !important; }
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(5) { top: 470px !important; }
 
-
-/*Video controls*/
-.rs-background-video-layer { display: none; }
 
 h2.stm-title,
 h4.stm-title { margin-bottom: 17px; } /*Used for being specific*/
@@ -561,9 +576,26 @@ OUR PEOPLE ENDS HERE
 CONTACT US STARTS HERE
 ====================================================*/
 
-.page-contact-us form .stm-btn_outline {
-  color: #ff7634;
+.page-contact-us form .stm-btn_outline,
+.page .wpcf7-submit {
   border-color: #ff7634;
+  background: #ff7634;
+  color: #fff;
+}
+
+.page .wpcf7-submit:hover,
+.page-contact-us form .stm-btn_outline:hover { 
+  border-color: #ff7634;
+  background: transparent; 
+  color: #ff7634;
+}
+
+/**Border color for Contact Forms**/
+
+.page .wpcf7-text, 
+.page .wpcf7-textarea { 
+  border-color: #c1c1c1;
+  margin-top: 4px;
 }
 
 /*=================================================
@@ -669,12 +701,16 @@ MEDIA QUERIES START HERE
 
 @media (max-width: 768px) {
 
+  /*Slider controls*/
   .tp-rightarrow,
   .tp-leftarrow {
     display: inline-block !important;
     opacity: 1 !important;
     visibility: visible !important;
   }
+
+  /*Video controls*/
+  .rs-background-video-layer { display: none; }
 
   .container .hesperiden.tparrows:hover { background: rgba(0,0,0,.5); }
 
@@ -849,6 +885,12 @@ MEDIA QUERIES START HERE
 
 @media (max-width: 495px) { 
   #rev_slider_3_1_wrapper .tp-revslider-mainul > li > div:nth-of-type(3) .tp-caption { font-size: 24px !important; }
+
+  .tp-rightarrow { 
+    left: auto !important;
+    right: -60px !important;
+  }
+  .tp-leftarrow { left: -20px !important; }
 }
 
 
