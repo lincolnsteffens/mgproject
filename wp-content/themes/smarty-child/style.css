@@ -721,7 +721,7 @@ MEDIA QUERIES START HERE
   }
 
   /*Video controls*/
-  .rs-background-video-layer { display: none; }
+  /*.rs-background-video-layer { display: none; }*/
 
   .container .hesperiden.tparrows:hover { background: rgba(0,0,0,.5); }
 
