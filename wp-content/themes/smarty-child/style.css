@@ -720,8 +720,8 @@ MEDIA QUERIES START HERE
     visibility: visible !important;
   }
 
-  /*Video controls*/
-  /*.rs-background-video-layer { display: none; }*/
+  /*Remove Video Overlay*/
+  .tp-revslider-mainul > li[data-index="rs-17"] > .tp-parallax-wrap { display: none !important; }
 
   .container .hesperiden.tparrows:hover { background: rgba(0,0,0,.5); }
 
