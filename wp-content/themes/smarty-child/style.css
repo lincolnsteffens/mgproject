@@ -77,6 +77,14 @@ a:active { text-decoration: none; }
   max-width: 100% !important;
 }
 
+#rev_slider_3_1_wrapper .tp-revslider-mainul > li > div:nth-of-type(4) .tp-caption:not(#slide-17-layer-3) {
+  width: 100vw;
+  white-space: normal !important;
+  padding: 0 20px !important;
+}
+
+
+
 
 /* Main Starts*/
 #rev_slider_3_1_wrapper .tp-revslider-mainul > li .tp-parallax-wrap:nth-of-type(3) { top: 300px !important; }
@@ -601,6 +609,23 @@ CONTACT US STARTS HERE
   color: #ff7634;
 }
 
+/** Placeholder Styling **/
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  line-height: 30px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  line-height: 30px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  line-height: 30px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  line-height: 30px;
+}
+
+
+
 /**Border color for Contact Forms**/
 
 .page .wpcf7-text, 
@@ -905,3 +930,17 @@ MEDIA QUERIES START HERE
 }
 
 
+/****IE specific tab border issue***/
+
+ @media screen and (min-width: 0\0) {
+
+.vc_tta-tabs_style-1.vc_tta-tabs.vc_tta-color-blue .vc_tta-tab > a { 
+  padding: 19px 15px !important;
+  border-top: 4px solid #000 !important;
+ }
+
+.vc_tta-tabs_style-1.vc_tta-tabs.vc_tta-color-blue .vc_tta-tab > a:hover { border-top: 4px solid #ff7634 !important; }
+.vc_tta-tabs_style-1.vc_tta-tabs.vc_tta-color-blue .vc_tta-tab.vc_active > a { border-top: 4px solid #ff7634 !important; }
+.vc_tta-tabs_style-1.vc_tta-tabs.vc_tta-color-blue .vc_tta-tab.vc_active > a:before { display: none !important; }
+
+}

@@ -96,4 +96,6 @@ jq( window ).on( "orientationchange", function( event ) {
         'slow');
   });
   }
+
+
 });
