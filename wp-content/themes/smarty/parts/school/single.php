@@ -22,7 +22,7 @@
 		<div class="container">
 			<?php if( $post_sidebar ) echo wp_kses_post( $content_layout["main_before"] ); ?>
 				<main class="main">
-                    <?php get_template_part( 'parts/'.smarty_get_university_mode().'/content', get_post_format() ); ?>
+                    <?php get_template_part( 'parts/'.smarty_get_layout_mode().'/content', get_post_format() ); ?>
 					<?php if ( comments_open() || get_comments_number() ) : ?>
 						<?php comments_template(); ?>
 					<?php endif; ?>

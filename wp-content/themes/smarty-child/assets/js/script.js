@@ -87,6 +87,10 @@ jq( window ).on( 'load', function () {
   }
 });
 
+// if(width < 768) {
+    jq('.rs-background-video-layer iframe').addClass('video-iframe');
+  // }
+
 jq( window ).on( "orientationchange", function( event ) {
   width = jq(window).width();
   if(width < 768) {

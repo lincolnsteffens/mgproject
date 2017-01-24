@@ -13,5 +13,5 @@
 <div id="wrapper">
 
 	<?php
-        get_template_part('parts/'.smarty_get_university_mode().'/header');
+        get_template_part('parts/'.smarty_get_layout_mode().'/header');
     ?>

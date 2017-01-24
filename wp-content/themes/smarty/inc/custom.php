@@ -8,12 +8,23 @@ if( ! function_exists('smarty_page_id') ) {
 			$page_id = get_option('woocommerce_shop_page_id');
 		} elseif( is_home() || is_single() && get_post_type() === 'post' || is_search() || is_archive() ) {
 			$page_id = get_option( 'page_for_posts' );
-		} elseif ( is_singular('stm_course') ) {
-			$stm_post_types_options = get_option('stm_post_types_options');
-			$page_id = $stm_post_types_options['stm_course']['page_for_courses'];
 		} else {
 			$page_id = get_the_ID();
 		}
+
+        if ( smarty_get_layout_mode() === 'school' ) {
+            if ( is_singular('stm_course') ) {
+                $stm_post_types_options = get_option('stm_post_types_options');
+                $page_id = $stm_post_types_options['stm_course']['page_for_courses'];
+            }
+        }
+
+        if ( smarty_get_layout_mode() === 'university' ) {
+            if ( is_singular('stm_course') ) {
+                $stm_post_types_options = get_option('stm_post_types_options');
+                $page_id = $stm_post_types_options['stm_course']['page_for_courses'];
+            }
+        }
 
 		return $page_id;
 	}
@@ -766,6 +777,13 @@ function smarty_cart_fragments() {
 			<?php esc_html_e( 'No products in the cart.', 'smarty' ); ?>
 		<?php endif; ?>
 	</div>
+    <?php if ( smarty_get_layout_mode() === 'kindergarten' ) : ?>
+        <?php if ( ! WC()->cart->is_empty() ) : ?>
+            <div class="shopping-cart__products shopping-cart__product"><?php echo sprintf (_n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'smarty' ), WC()->cart->get_cart_contents_count() ); ?></div>
+        <?php else : ?>
+
+        <?php endif; ?>
+    <?php endif; ?>
 <?php
 
 	$fragments['.shopping-cart__products'] = ob_get_clean();
@@ -855,7 +873,7 @@ if( ! function_exists( 'stm_importer_done_function' ) ){
 
 		set_theme_mod( 'nav_menu_locations', $locations );
 
-        if ( smarty_get_university_mode() === 'university' ) {
+        if ( smarty_get_layout_mode() === 'university' ) {
             update_option('blogdescription', 'university');
         }
 
@@ -873,7 +891,7 @@ if( ! function_exists( 'stm_importer_done_function' ) ){
 
 		$shop_page = get_page_by_title( 'Shop' );
 		if( isset( $shop_page->ID ) ) {
-            if ( smarty_get_university_mode() === 'school' ) {
+            if ( smarty_get_layout_mode() === 'school' ) {
                 update_option( 'woocommerce_shop_page_id', $shop_page->ID );
                 update_option( 'shop_catalog_image_size[width]', 174 );
                 update_option( 'shop_catalog_image_size[height]', 174 );
@@ -882,7 +900,7 @@ if( ! function_exists( 'stm_importer_done_function' ) ){
                 update_option( 'shop_thumbnail_image_size[width]', 50 );
                 update_option( 'shop_thumbnail_image_size[height]', 50 );
             }
-            else if(smarty_get_university_mode() === 'university') {
+            else if(smarty_get_layout_mode() === 'university') {
                 update_option( 'woocommerce_shop_page_id', $shop_page->ID );
                 update_option( 'shop_catalog_image_size[width]', 138 );
                 update_option( 'shop_catalog_image_size[height]', 202 );
@@ -917,7 +935,7 @@ if( ! function_exists( 'stm_importer_done_function' ) ){
 		}
 
 		if ( class_exists( 'RevSlider' ) ) {
-            if ( smarty_get_university_mode() === 'school' ) {
+            if ( smarty_get_layout_mode() === 'school' ) {
                 $home = get_template_directory() . '/inc/demo/home.zip';
 
                 if ( file_exists( $home ) ) {
@@ -947,8 +965,17 @@ if( ! function_exists( 'stm_importer_done_function' ) ){
                 }
             }
 
-            else if(smarty_get_university_mode() === 'university') {
+            else if(smarty_get_layout_mode() === 'university') {
                 $home = get_template_directory() . '/inc/demo/home_slider_university.zip';
+
+                if ( file_exists( $home ) ) {
+                    $slider = new RevSlider();
+                    $slider->importSliderFromPost( true, true, $home );
+                }
+            }
+
+            else if(smarty_get_layout_mode() === 'kindergarten') {
+                $home = get_template_directory() . '/inc/demo/home_slider_kindergarten.zip';
 
                 if ( file_exists( $home ) ) {
                     $slider = new RevSlider();

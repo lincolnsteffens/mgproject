@@ -23,7 +23,7 @@ if( !empty( $header_view_style ) ) {
 <?php
 /* --- Top Bar ---*/
 if( $top_bar_show ) {
-    get_template_part( 'parts/'.smarty_get_university_mode().'/top-bar', $header_view_style );
+    get_template_part( 'parts/'.smarty_get_layout_mode().'/top-bar', $header_view_style );
 }
 ?>
 
@@ -57,9 +57,9 @@ if( $top_bar_show ) {
             <div class="logo-box-blue">
                 <?php if( $logo2 = get_theme_mod('logo2') ) : ?>
                     <a href="<?php echo esc_url( home_url('/') ); ?>" class="logo" title="<?php echo bloginfo('name'); ?>">
-                    <span class="logo__icon">
-                        <img src="<?php echo esc_url( $logo2 ); ?>" alt="">
-                    </span>
+                        <span class="logo__icon">
+                            <img src="<?php echo esc_url( $logo2 ); ?>" alt="">
+                        </span>
                         <?php /* --- Logo text --- */ if( get_theme_mod( 'logo_text', true ) ) : ?>
                             <span class="logo__inner">
                             <span class="logo__title"><?php echo bloginfo('name'); ?></span>
@@ -69,10 +69,10 @@ if( $top_bar_show ) {
                     </a>
                 <?php else: ?>
                     <a href="<?php echo esc_url( home_url('/') ); ?>" class="logo logo_type_text" title="<?php echo bloginfo('name'); ?>">
-                    <span class="logo__inner">
-                        <span class="logo__title"><?php echo bloginfo('name'); ?></span>
-                        <span class="logo__description"><?php echo bloginfo('description'); ?></span>
-                    </span>
+                        <span class="logo__inner">
+                            <span class="logo__title"><?php echo bloginfo('name'); ?></span>
+                            <span class="logo__description"><?php echo bloginfo('description'); ?></span>
+                        </span>
                     </a>
                 <?php endif; ?>
             </div>

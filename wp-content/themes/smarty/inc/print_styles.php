@@ -60,7 +60,7 @@ if( ! function_exists('smarty_skin_custom') ) {
 				WP_Filesystem();
 			}
 
-			$custom_style_css = $wp_filesystem->get_contents( get_template_directory() . '/assets/css/'.smarty_get_university_mode().'/main.css' );
+			$custom_style_css = $wp_filesystem->get_contents( get_template_directory() . '/assets/css/'.smarty_get_layout_mode().'/main.css' );
 			$base_color = get_theme_mod( 'skin_color_base', '#81ca00' );
 			$secondary_color = get_theme_mod( 'skin_color_secondary', '#00aaff' );
 			$third_color = get_theme_mod( 'skin_color_third', '#011b3a' );
@@ -88,45 +88,68 @@ if( ! function_exists('smarty_skin_custom') ) {
                 'rgba(0, 170, 255, 0.8)'
             );
 
-            if(smarty_get_university_mode() == 'university') {
+            $custom_style_css = str_replace(
+                $styles,
+                array(
+                    $base_color,
+                    $secondary_color,
+                    $third_color,
+                    smarty_hex2rgba( $base_color, .85 ),
+                    smarty_hex2rgba( $base_color, .1 ),
+                    smarty_hex2rgba( $base_color, .25 ),
+                    smarty_hex2rgba( $base_color, .5 ),
+                    smarty_hex2rgba( $base_color, .75 ),
+                    smarty_hex2rgba( $base_color, .58 ),
+                    smarty_hex2rgba( $secondary_color, .8 ),
+                    smarty_hex2rgba( $third_color, .4 ),
+                    smarty_hex2rgba( $third_color, .5 ),
+                    smarty_hex2rgba( $third_color, .8 ),
+                    smarty_hex2rgba( $third_color, .75 )
+                ),
+                $custom_style_css
+            );
+
+            if(smarty_get_layout_mode() == 'university') {
                 $styles = array(
                     '#8c1515',
                     '#002147',
-                    '#fff',
-                    'rgba(1, 27, 58, 0.85)',
-                    'rgba(1, 27, 58, 0.1)',
-                    'rgba(1, 27, 58, 0.25)',
-                    'rgba(1, 27, 58, 0.5)',
-                    'rgba(1, 27, 58, 0.75)',
-                    'rgba(1, 27, 58, 0.58)',
-                    'rgba(129, 202, 0, 0.8)',
-                    'rgba(0, 170, 255, 0.75)',
-                    'rgba(0, 170, 255, 0.4)',
-                    'rgba(0, 170, 255, 0.5)',
-                    'rgba(0, 170, 255, 0.8)'
+                    '#fff'
+                );
+
+                $custom_style_css = str_replace(
+                    $styles,
+                    array(
+                        $base_color,
+                        $secondary_color,
+                        $third_color
+                    ),
+                    $custom_style_css
                 );
             }
 
-			$custom_style_css = str_replace(
-				$styles,
-				array(
-					$base_color,
-					$secondary_color,
-					$third_color,
-					smarty_hex2rgba( $base_color, .85 ),
-					smarty_hex2rgba( $base_color, .1 ),
-					smarty_hex2rgba( $base_color, .25 ),
-					smarty_hex2rgba( $base_color, .5 ),
-					smarty_hex2rgba( $base_color, .75 ),
-					smarty_hex2rgba( $base_color, .58 ),
-					smarty_hex2rgba( $secondary_color, .8 ),
-					smarty_hex2rgba( $third_color, .4 ),
-					smarty_hex2rgba( $third_color, .5 ),
-					smarty_hex2rgba( $third_color, .8 ),
-					smarty_hex2rgba( $third_color, .75 )
-				),
-				$custom_style_css
-			);
+            if(smarty_get_layout_mode() == 'kindergarten') {
+                $styles = array(
+                    '#ff6682',
+                    '#56509f',
+                    '#ffdd00',
+                    'rgba(86, 80, 159, 0.85)',
+                    'rgba(86, 80, 159, 0.5)'
+                );
+
+                $custom_style_css = str_replace(
+                    $styles,
+                    array(
+                        $base_color,
+                        $secondary_color,
+                        $third_color,
+                        smarty_hex2rgba( $base_color, .85 ),
+                        smarty_hex2rgba( $secondary_color, .5 )
+                    ),
+                    $custom_style_css
+                );
+            }
+
+
 
 			$upload_dir = wp_upload_dir();
 

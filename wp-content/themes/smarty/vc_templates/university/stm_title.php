@@ -147,17 +147,19 @@ if( $subtitle_enable && !empty( $content ) ) {
 
 ?>
 <?php if( !empty( $title_more_link_enable ) ) : ?>
-    <?php if( !empty( $stm_page_title ) ) : ?>
-        <<?php echo esc_attr( $title_tag ); ?> class="wrap-title stm-title <?php echo esc_attr( $title_class ); ?>" <?php echo sanitize_text_field( $title_inline_style ); ?>>
-            <?php echo esc_html( $stm_page_title ); ?>
-        </<?php echo esc_attr( $title_tag ) ?>>
-    <?php endif; ?>
-
-    <?php if( $title_more_link ) : ?>
-        <?php if( !empty( $title_more_link['url'] ) ) : ?>
-            <a href="<?php echo esc_attr( $title_more_link['url'] ); ?>" class="stm-more-link stm-title-more-link <?php echo esc_attr( $title_more_class ); ?>" <?php echo sanitize_text_field( $title_more_inline_style ); ?>><?php echo esc_html( $title_more_link['title'] ); ?></a>
+    <div class="wrap-title-box">
+        <?php if( !empty( $stm_page_title ) ) : ?>
+            <<?php echo esc_attr( $title_tag ); ?> class="wrap-title stm-title <?php echo esc_attr( $title_class ); ?>" <?php echo sanitize_text_field( $title_inline_style ); ?>>
+                <?php echo esc_html( $stm_page_title ); ?>
+            </<?php echo esc_attr( $title_tag ) ?>>
         <?php endif; ?>
-    <?php endif; ?>
+
+        <?php if( $title_more_link ) : ?>
+            <?php if( !empty( $title_more_link['url'] ) ) : ?>
+                <a href="<?php echo esc_attr( $title_more_link['url'] ); ?>" class="stm-more-link stm-title-more-link <?php echo esc_attr( $title_more_class ); ?>" <?php echo sanitize_text_field( $title_more_inline_style ); ?>><?php echo esc_html( $title_more_link['title'] ); ?></a>
+            <?php endif; ?>
+        <?php endif; ?>
+    </div>
 
     <div class="clearfix"></div>
 

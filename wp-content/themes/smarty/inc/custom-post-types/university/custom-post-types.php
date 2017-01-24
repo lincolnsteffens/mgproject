@@ -259,7 +259,7 @@ if( class_exists('STM_PostType') ) {
 			));
 
 			$teachers_data = array(
-				0 => esc_html__('Choose', 'smarty')
+				null => esc_html__('Choose', 'smarty')
 			);
 
 			if( !empty( $teachers ) ) {

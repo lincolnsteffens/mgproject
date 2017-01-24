@@ -223,62 +223,62 @@ $view_id = uniqid( 'stm-posts_' . $view . '-' );
     </div><!-- STM Posts -->
 
     <?php if( 'carousel' === $view ) : ?>
-        <script>
-            (function($) {
-                "use strict";
+		<script>
+			(function($) {
+				"use strict";
 
-                $(document).ready(function() {
-                    var carouselId = '<?php echo esc_js( $view_id ); ?>';
-                    var $carousel = $('#'+carouselId);
+				$(document).ready(function() {
+					var carouselId = '<?php echo esc_js( $view_id ); ?>';
+					var $carousel = $('#'+carouselId);
 
-                    $('#'+carouselId).owlCarousel({
-                        loop   : false,
-                        margin : 30,
-                        nav    : false,
-                        lazyLoad:true,
-                        responsive:{
-                            0 : {
-                                items : 1
-                            },
-                            640 : {
-                                items : 2
-                            },
-                            992 : {
-                                items : 3
-                            }
-                        }
-                    });
+					$('#'+carouselId).owlCarousel({
+						loop   : false,
+						margin : 30,
+						nav    : false,
+						lazyLoad:true,
+						responsive:{
+							0 : {
+								items : 1
+							},
+							640 : {
+								items : 2
+							},
+							992 : {
+								items : 3
+							}
+						}
+					});
+					
+					$('.vc_tta-tab').click(function(){
+						setTimeout(function(){
+							$carousel.trigger('destroy.owl.carousel');
+							$carousel.html($carousel.find('.owl-stage-outer').html()).removeClass('owl-loaded');
+							
+							$('#'+carouselId).owlCarousel({
+								loop   : false,
+								margin : 30,
+								nav    : false,
+								lazyLoad:true,
+								responsive:{
+									0 : {
+										items : 1
+									},
+									640 : {
+										items : 2
+									},
+									992 : {
+										items : 3
+									}
+								}
+							});
+						}, 300);
+					});
+					
+				});
 
-                    $('.vc_tta-tab.vc_active').each(function(){
-                        setTimeout(function(){
-                            $carousel.trigger('destroy.owl.carousel');
-                            $carousel.html($carousel.find('.owl-stage-outer').html()).removeClass('owl-loaded');
-
-                            $('#'+carouselId).owlCarousel({
-                                loop   : false,
-                                margin : 30,
-                                nav    : false,
-                                lazyLoad:true,
-                                responsive:{
-                                    0 : {
-                                        items : 1
-                                    },
-                                    640 : {
-                                        items : 2
-                                    },
-                                    992 : {
-                                        items : 3
-                                    }
-                                }
-                            });
-                        }, 300);
-                    });
-
-                });
-
-            })(jQuery);
-        </script>
-    <?php endif; ?>
+			})(jQuery);
+		</script>
+	<?php endif; ?>
 
 <?php endif; ?>
 

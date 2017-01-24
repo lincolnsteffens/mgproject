@@ -1,0 +1,33 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /mg-rebuild/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /mg-rebuild/index.php [L]
+</IfModule>
+
+<files readme.html>
+order allow,deny
+deny from all
+</files>
+
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+
+<files install.php>
+order allow,deny
+deny from all
+</files>
+
+<files license.txt>
+order allow,deny
+deny from all
+</files>
+
+# END WordPress
+

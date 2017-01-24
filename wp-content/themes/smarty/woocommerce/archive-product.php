@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 get_header(); ?>
 <?php get_template_part( 'parts/page', 'title' ); ?>
+<?php get_template_part( 'parts/page', 'breadcrumbs' ); ?>
 <?php
 	$shop_sidebar = get_theme_mod('shop_sidebar', 'right');
 	$content_layout = smarty_content_layout( $shop_sidebar );
@@ -14,6 +15,10 @@ get_header(); ?>
 		<?php if( is_active_sidebar( 'shop-sidebar' ) && $content_layout['sidebar'] ) echo wp_kses_post( $content_layout['main_before'] ); ?>
 
 				<main class="main" role="main">
+                    <?php $page_id = smarty_page_id(); ?>
+                    <?php if ( get_post_meta( $page_id, 'stm_page_title_hide', true ) ) : ?>
+                        <h1><?php woocommerce_page_title(); ?></h1>
+                    <?php endif; ?>
 
 					<?php if ( have_posts() ) : ?>
 

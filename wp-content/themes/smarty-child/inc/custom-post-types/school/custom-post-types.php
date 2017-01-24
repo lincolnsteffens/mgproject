@@ -603,7 +603,7 @@ if( class_exists('STM_PostType') ) {
 				'stm_teacher' => array(
 					'title' => esc_html__( 'Alumni', 'smarty' ),
 					'plural_title' => esc_html__( 'Alumni', 'smarty' ),
-					'rewrite' => 'alumni-posts'
+					'rewrite' => 'teachers'
 				),
 				'stm_donation' => array(
 					'title' => esc_html__( 'Donation', 'smarty' ),

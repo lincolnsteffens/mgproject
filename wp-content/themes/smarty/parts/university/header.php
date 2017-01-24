@@ -27,7 +27,7 @@ if( !empty( $header_view_style ) ) {
 
     <?php
         /* --- Top Bar ---*/
-        get_template_part( 'parts/'.smarty_get_university_mode().'/header-' . $header_view_style );
+        get_template_part( 'parts/'.smarty_get_layout_mode().'/header-' . $header_view_style );
     ?>
 
     <?php if( $sticky_header === true ) : ?>

@@ -12,6 +12,7 @@
 		$stm_page_title_height = get_post_meta( $page_id, 'stm_page_title_height', true );
 		$stm_page_title_bgcolor = get_post_meta( $page_id, 'stm_page_title_bgcolor', true );
 		$stm_page_subtitle = get_post_meta( $page_id, 'stm_page_subtitle', true );
+		$stm_page_title_position = get_post_meta( $page_id, 'stm_page_title_position', true );
 		$stm_page_title_color = get_post_meta( $page_id, 'stm_page_title_color', true );
 		$stm_page_title_sep_line_color = get_post_meta( $page_id, 'stm_page_title_sep_line_color', true );
 		$stm_page_subtitle_color = get_post_meta( $page_id, 'stm_page_subtitle_color', true );
@@ -103,32 +104,34 @@
 			<div class="stm-page-head__content">
                 <?php if ( ! get_post_meta( $page_id, 'stm_page_breadcrumbs_hide', true ) ) : ?>
 
-                    <div class="breadcrumbs">
-                        <?php if(function_exists('bcn_display')) {bcn_display();} ?>
-                    </div>
+                    <?php if ( in_array( 'breadcrumb-navxt/breadcrumb-navxt.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) : ?>
+                        <div class="breadcrumbs">
+                            <?php if(function_exists('bcn_display')) {bcn_display();} ?>
+                        </div>
+                    <?php endif; ?>
 
                 <?php endif; ?>
 				<?php if( is_author() ) : ?>
 					<?php the_post(); ?>
-					<h1 class="stm-page-head__title" <?php echo sanitize_text_field( $page_title_style ); ?>><?php printf( esc_html__( 'All posts by %s', 'smarty' ), get_the_author() ); ?></h1>
+					<h1 class="stm-page-head__title <?php echo esc_attr( $stm_page_title_position ) ?>" <?php echo sanitize_text_field( $page_title_style ); ?>><?php printf( esc_html__( 'All posts by %s', 'smarty' ), get_the_author() ); ?></h1>
 					<?php rewind_posts(); ?>
 				<?php elseif( is_tag() ) : ?>
-					<h1 class="stm-page-head__title" <?php echo sanitize_text_field( $page_title_style ); ?>><?php printf( esc_html__( 'Tag Archives: %s', 'smarty' ), single_tag_title( '', false ) ); ?></h1>
+					<h1 class="stm-page-head__title <?php echo esc_attr( $stm_page_title_position ); ?>" <?php echo sanitize_text_field( $page_title_style ); ?>><?php printf( esc_html__( 'Tag Archives: %s', 'smarty' ), single_tag_title( '', false ) ); ?></h1>
 				<?php elseif( is_category() ) : ?>
-					<h1 class="stm-page-head__title" <?php echo sanitize_text_field( $page_title_style ); ?>><?php printf( esc_html__( 'Category Archives: %s', 'smarty' ), single_cat_title( '', false ) ); ?></h1>
+					<h1 class="stm-page-head__title <?php echo esc_attr( $stm_page_title_position ); ?>" <?php echo sanitize_text_field( $page_title_style ); ?>><?php printf( esc_html__( 'Category Archives: %s', 'smarty' ), single_cat_title( '', false ) ); ?></h1>
                 <?php elseif( is_archive() && function_exists( 'is_shop' ) && ! is_shop() ) : ?>
-					<h1 class="stm-page-head__title" <?php echo sanitize_text_field( $page_title_style ); ?>><?php the_archive_title(); ?></h1>
+					<h1 class="stm-page-head__title <?php echo esc_attr( $stm_page_title_position ); ?>" <?php echo sanitize_text_field( $page_title_style ); ?>><?php the_archive_title(); ?></h1>
 				<?php elseif( ! $page_id && is_home() ) : ?>
 					<?php $posts_title = get_theme_mod( 'posts_title',  esc_html__( 'News', 'smarty' ) ); ?>
-					<h1 class="stm-page-head__title" <?php echo sanitize_text_field( $page_title_style ); ?>><?php echo esc_html( $posts_title ); ?></h1>
+					<h1 class="stm-page-head__title <?php echo esc_attr( $stm_page_title_position ); ?>" <?php echo sanitize_text_field( $page_title_style ); ?>><?php echo esc_html( $posts_title ); ?></h1>
 				<?php elseif( is_search() ) : ?>
-					<h1 class="stm-page-head__title" <?php echo sanitize_text_field( $page_title_style ); ?>><?php esc_html_e( 'Search results', 'smarty' ); ?></h1>
+					<h1 class="stm-page-head__title <?php echo esc_attr( $stm_page_title_position ); ?>" <?php echo sanitize_text_field( $page_title_style ); ?>><?php esc_html_e( 'Search results', 'smarty' ); ?></h1>
 				<?php elseif( class_exists('WooCommerce') && is_product() ) : ?>
-					<h1 class="stm-page-head__title" <?php echo sanitize_text_field( $page_title_style ); ?>><?php the_title(); ?></h1>
+					<h1 class="stm-page-head__title <?php echo esc_attr( $stm_page_title_position ); ?>" <?php echo sanitize_text_field( $page_title_style ); ?>><?php the_title(); ?></h1>
 				<?php elseif( $stm_page_title = get_post_meta( $page_id, 'stm_page_title', true ) ) : ?>
-					<h1 class="stm-page-head__title" <?php echo sanitize_text_field( $page_title_style ); ?>><?php echo esc_html( $stm_page_title ); ?></h1>
+					<h1 class="stm-page-head__title <?php echo esc_attr( $stm_page_title_position ); ?>" <?php echo sanitize_text_field( $page_title_style ); ?>><?php echo esc_html( $stm_page_title ); ?></h1>
 				<?php elseif( get_the_title( $page_id ) ) : ?>
-					<h1 class="stm-page-head__title" <?php echo sanitize_text_field( $page_title_style ); ?>><?php echo get_the_title( $page_id ); ?></h1>
+					<h1 class="stm-page-head__title <?php echo esc_attr( $stm_page_title_position ); ?>" <?php echo sanitize_text_field( $page_title_style ); ?>><?php echo get_the_title( $page_id ); ?></h1>
 				<?php endif; ?>
 
 				<div class="stm-page-head__separator">

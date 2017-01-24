@@ -21,8 +21,8 @@ if ( ! class_exists( 'STM_Customizer' ) ) {
 		}
 
 		public static function init() {
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/google-fonts.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/registration.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/google-fonts.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/registration.php';
 
 			add_action( 'customize_register', array( get_class(), 'load' ) );
 			add_action( 'wp', array( get_class(), 'generate_css' ) );
@@ -148,33 +148,33 @@ if ( ! class_exists( 'STM_Customizer' ) ) {
 
 		public static function load_controls() {
 
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/select-bg.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/input_controller.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/checkbox.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/multiple-checkbox.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/code.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/heading.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/select.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/select-icons.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/post-type.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/separator.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/text.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/font-family.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/attr.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/font-weight.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/icon-picker.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/slider.php';
-			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_university_mode().'/controls/socials.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/select-bg.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/input_controller.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/checkbox.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/multiple-checkbox.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/code.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/heading.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/select.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/select-icons.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/post-type.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/separator.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/text.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/font-family.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/attr.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/font-weight.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/icon-picker.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/slider.php';
+			require_once SMARTY_CUSTOMIZER_PATH . '/'.smarty_get_layout_mode().'/controls/socials.php';
 
 		}
 
 		public static function admin_scripts() {
-			wp_enqueue_style( 'stm-customizer.css', SMARTY_CUSTOMIZER_URI . '/'.smarty_get_university_mode().'/assets/css/customizer.css', array( 'wp-color-picker' ), SMARTY_THEME_VERSION, 'all' );
-			wp_enqueue_style( 'stm-icons.css', SMARTY_CUSTOMIZER_URI . '/'.smarty_get_university_mode().'/assets/css/icons.css', array(), SMARTY_THEME_VERSION, 'all' );
+			wp_enqueue_style( 'stm-customizer.css', SMARTY_CUSTOMIZER_URI . '/'.smarty_get_layout_mode().'/assets/css/customizer.css', array( 'wp-color-picker' ), SMARTY_THEME_VERSION, 'all' );
+			wp_enqueue_style( 'stm-icons.css', SMARTY_CUSTOMIZER_URI . '/'.smarty_get_layout_mode().'/assets/css/icons.css', array(), SMARTY_THEME_VERSION, 'all' );
 		}
 
 		public static function customizer_preview_scripts() {
-			wp_enqueue_script( 'stm-customizer-preview.js', SMARTY_CUSTOMIZER_URI . '/'.smarty_get_university_mode().'/assets/js/customizer-preview.js', array( 'jquery', 'customize-preview' ), SMARTY_THEME_VERSION, true );
+			wp_enqueue_script( 'stm-customizer-preview.js', SMARTY_CUSTOMIZER_URI . '/'.smarty_get_layout_mode().'/assets/js/customizer-preview.js', array( 'jquery', 'customize-preview' ), SMARTY_THEME_VERSION, true );
 		}
 
 		public static function admin_enqueue_scripts() {
@@ -185,9 +185,9 @@ if ( ! class_exists( 'STM_Customizer' ) ) {
 				WP_Filesystem();
 			}
 
-			wp_enqueue_script( SMARTY_THEME_SLUG . '-customizer.js', SMARTY_CUSTOMIZER_URI . '/'.smarty_get_university_mode().'/assets/js/customizer.js', array( 'customize-controls', 'wp-color-picker' ), SMARTY_THEME_VERSION, true );
+			wp_enqueue_script( SMARTY_THEME_SLUG . '-customizer.js', SMARTY_CUSTOMIZER_URI . '/'.smarty_get_layout_mode().'/assets/js/customizer.js', array( 'customize-controls', 'wp-color-picker' ), SMARTY_THEME_VERSION, true );
 
-			$icons = json_decode( $wp_filesystem->get_contents( get_template_directory() . '/'.smarty_get_university_mode().'/assets/js/theme_icons.json' ), true );
+			$icons = json_decode( $wp_filesystem->get_contents( get_template_directory() . '/'.smarty_get_layout_mode().'/assets/js/theme_icons.json' ), true );
 
 			if( ! empty( $icons['icons'] ) ){
 				foreach ( $icons['icons'] as $icon ) {

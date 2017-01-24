@@ -11,6 +11,13 @@
 				<?php esc_html_e( 'No products in the cart.', 'smarty' ); ?>
 			<?php endif; ?>
 			</div>
+            <?php if ( smarty_get_layout_mode() === 'kindergarten' ) : ?>
+                <?php if ( ! WC()->cart->is_empty() ) : ?>
+                    <div class="shopping-cart__products shopping-cart__product"><?php echo sprintf (_n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'smarty' ), WC()->cart->get_cart_contents_count() ); ?></div>
+                <?php else : ?>
+
+                <?php endif; ?>
+            <?php endif; ?>
 		</div>
 	</div>
 	</a>

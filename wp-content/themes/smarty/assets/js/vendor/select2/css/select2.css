@@ -56,7 +56,10 @@
   position: absolute;
   left: -100000px;
   width: 100%;
-  z-index: 1051; }
+  z-index: 1051;
+    border-bottom-right-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
+    overflow: hidden;}
 
 .select2-results {
   display: block; }
@@ -253,7 +256,7 @@
   -webkit-appearance: textfield; }
 
 .select2-container--default .select2-results > .select2-results__options {
-  max-height: 200px;
+  max-height: 400px;
   overflow-y: auto; }
 
 .select2-container--default .select2-results__option[role=group] {

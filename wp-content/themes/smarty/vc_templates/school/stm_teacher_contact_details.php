@@ -4,6 +4,7 @@ $output = '';
 $teacher_address = '';
 $teacher_tel = '';
 $teacher_skype = '';
+$teacher_email = '';
 $teacher_url = '';
 
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
@@ -27,6 +28,9 @@ $teacher_url = vc_build_link($teacher_url);
 		<?php if( !empty( $teacher_skype ) ) : ?>
 			<li class="stm-contact-details__item stm-contact-details__item_type_skype"><a href="skype:<?php echo esc_attr( $teacher_skype ); ?>?chat"><?php echo esc_html( $teacher_skype ); ?></a></li>
 		<?php endif; ?>
+        <?php if( !empty( $teacher_email ) ) : ?>
+            <li class="stm-contact-details__item stm-contact-details__item_type_email"><a href="mailto:<?php echo esc_attr( $teacher_email ); ?>"><?php echo esc_html( $teacher_email ); ?></a></li>
+        <?php endif; ?>
 		<?php if( !empty( $teacher_url['url'] ) ) : ?>
 			<li class="stm-contact-details__item stm-contact-details__item_type_url"><a href="mailto:<?php echo esc_attr( $teacher_url['url'] ); ?>"><?php echo esc_html( $teacher_url['title'] ); ?></a></li>
 		<?php endif; ?>

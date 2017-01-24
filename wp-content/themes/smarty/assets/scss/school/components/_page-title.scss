@@ -4,6 +4,15 @@
 	background: $dark-blue;
 	padding: 71px 0 78px;
 	background-size: cover;
+
+    .breadcrumbs {
+      padding-top: 0;
+      color: $white;
+
+      a {
+        color: $white;
+      }
+    }
 }
 
 // Overlay

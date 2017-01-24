@@ -20,6 +20,8 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+define('WP_CACHE', false); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', '/home/content/62/4175062/html/mg-rebuild/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 define('DB_NAME', 'mgrebuild');
 
 /** MySQL database username */
@@ -81,7 +83,7 @@ define('WP_DEBUG', false);
 
 define( 'DISALLOW_FILE_EDIT', true );
 
-define( 'DISALLOW_FILE_MODS',true);
+// define( 'DISALLOW_FILE_MODS',true);
 
 /* That's all, stop editing! Happy blogging. */
 

@@ -47,7 +47,7 @@
 						<div class="top-bar__account stm-nav">
 							<ul class="stm-nav__menu">
 								<?php if ( is_user_logged_in() ) : ?>
-									<li><a class="top-bar__account-action top-bar__account-action_login" href="<?php echo esc_url( get_permalink( $account_page_id ) ); ?>" title="<?php esc_attr_e('Logout', 'smarty'); ?>"><?php esc_html_e('Logout', 'smarty'); ?></a></li>
+									<li><a class="top-bar__account-action top-bar__account-action_login" href="<?php echo esc_url( get_permalink( $account_page_id ) ); ?>" title="<?php esc_attr_e('My account', 'smarty'); ?>"><?php esc_html_e('My account', 'smarty'); ?></a></li>
 								<?php else: ?>
 									<li><a class="top-bar__account-action top-bar__account-action_logout" href="<?php echo esc_url( get_permalink( $account_page_id ) ); ?>" title="<?php esc_attr_e('Login', 'smarty'); ?>"><?php esc_html_e('Login', 'smarty'); ?></a></li>
 								<?php endif; ?>

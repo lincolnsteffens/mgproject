@@ -25,7 +25,7 @@
 
 			<main class="main">
 				<?php
-					get_template_part( 'parts/content', 'donation' );
+					get_template_part( 'parts/'.smarty_get_layout_mode().'/content', 'donation' );
 
 					if ( comments_open() || get_comments_number() ) :
 						comments_template();

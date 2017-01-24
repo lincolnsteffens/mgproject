@@ -79,7 +79,7 @@
 			$(this).addClass("active").siblings().removeClass("active");
 			$('#skin-style').remove();
 			if( skinName != 'skin-green' ) {
-				$('head').append('<link rel="stylesheet" id="skin-style" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/<?php echo smarty_get_university_mode(); ?>/'+skinName+'.css" media="all">')
+				$('head').append('<link rel="stylesheet" id="skin-style" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/<?php echo smarty_get_layout_mode(); ?>/'+skinName+'.css" media="all">')
 			}
 		});
 
@@ -103,7 +103,7 @@
 			}
 		});
 
-        <?php if( smarty_get_university_mode() == 'school' ) : ?>
+        <?php if( smarty_get_layout_mode() == 'school' ) : ?>
             if( $(".header").length && $(".header").hasClass("header_view-style_3") || $(".header").length && $(".header").hasClass("header_view-style_4") ) {
                 $(".header .logo img").attr("src", '<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/tmp/logo-white.svg' );
             }

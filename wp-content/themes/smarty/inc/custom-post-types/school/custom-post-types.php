@@ -100,6 +100,16 @@ if( class_exists('STM_PostType') ) {
 				)
 			) );
 
+            STM_PostType::addMetaBox( 'stm_page_breadcrumbs_mb', esc_html__( 'Breadcrumbs', 'smarty' ), array( 'page', 'stm_teacher', 'stm_event', 'stm_donation', 'stm_administrator', 'stm_course' ), '', '', '', array(
+                'fields' => array(
+                    'stm_page_breadcrumbs_hide' => array(
+                        'label'   => esc_html__( 'Hide', 'smarty' ),
+                        'type'    => 'checkbox',
+                        'default' => true
+                    ),
+                )
+            ) );
+
 			$stm_footers = get_posts(array(
 				'posts_per_page' => -1,
 				'post_type' => 'stm_footer'
@@ -213,7 +223,7 @@ if( class_exists('STM_PostType') ) {
 			));
 
 			$teachers_data = array(
-				0 => esc_html__('Choose', 'smarty')
+				null => esc_html__('Choose', 'smarty')
 			);
 
 			if( !empty( $teachers ) ) {

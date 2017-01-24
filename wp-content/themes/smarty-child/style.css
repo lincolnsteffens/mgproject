@@ -206,7 +206,10 @@ h4.stm-title { margin-bottom: 17px; } /*Used for being specific*/
   text-decoration: none;
 }
 
-.stm-vc-footer .social-copyrights .wpb_text_column p { font-size: 13px; }
+.stm-vc-footer .social-copyrights .wpb_text_column p { 
+  font-size: 13px;
+  line-height: 20px;
+}
 
 .stm-vc-footer .vc_icon_element {
   margin-bottom: 0;
@@ -326,9 +329,8 @@ BLOGS AND NEWS START HERE
 .stm-posts .entry-meta a:hover { text-decoration: none; }
 
 .vc_wp_search .widget_search .stm-search-form .stm-search-form__field {
-  height: auto;
-  padding: 12px 55px 12px 20px;
-  line-height: 18px;
+  padding: 8px 55px 10px 20px;
+  line-height: 25px;
 }
 
 .paging-navigation { text-align: center; }
@@ -748,6 +750,9 @@ MEDIA QUERIES START HERE
   /*Remove Video Overlay*/
   .tp-revslider-mainul > li[data-index="rs-17"] > .tp-parallax-wrap { display: none !important; }
 
+  /*Hide video control*/
+  .controls-wrapper .controls { display: none !important; }
+
   .container .hesperiden.tparrows:hover { background: rgba(0,0,0,.5); }
 
   .page-blogs .entry-thumbnail-container .entry-thumbnail img,
@@ -929,6 +934,10 @@ MEDIA QUERIES START HERE
   .tp-leftarrow { left: -20px !important; }
 }
 
+
+@media (max-width: 340px) { 
+ .tp-mask-wrap .tp-caption.TextRegular { font-size: 14px !important; }
+}
 
 /****IE specific tab border issue***/
 

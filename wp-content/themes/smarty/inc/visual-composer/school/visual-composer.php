@@ -98,7 +98,7 @@ if ( function_exists( 'vc_map' ) ) {
     if ( ! function_exists('smarty_vc_map_shortcodes') ) {
 
         function smarty_vc_map_shortcodes() {
-            $custom_vc_map_path = get_template_directory() . '/inc/visual-composer/'.smarty_get_university_mode().'/vc-map';
+            $custom_vc_map_path = get_template_directory() . '/inc/visual-composer/'.smarty_get_layout_mode().'/vc-map';
 
             // Achievement
             require_once $custom_vc_map_path . '/stm_achievement.php';
@@ -3178,6 +3178,11 @@ if ( function_exists( 'vc_map' ) ) {
                         'param_name' => 'teacher_skype'
                     ),
                     array(
+                        'type'       => 'textfield',
+                        'heading'    => esc_html__( 'Email', 'smarty' ),
+                        'param_name' => 'teacher_email'
+                    ),
+                    array(
                         'type'       => 'vc_link',
                         'heading'    => esc_html__( 'URL', 'smarty' ),
                         'param_name' => 'teacher_url'
@@ -3291,7 +3296,7 @@ if ( function_exists( 'vc_map' ) ) {
 
             // Course - Teacher bio
             vc_map( array(
-                'name'        => esc_html__( '(STM) Teacher - Bio', 'smarty' ),
+                'name'        => esc_html__( '(STM) Teacher course- Bio', 'smarty' ),
                 'base'        => 'stm_course_teacher_bio',
                 'category'    => esc_html__( 'STM - Course', 'smarty' ),
                 'params'      => array(

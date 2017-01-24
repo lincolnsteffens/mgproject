@@ -13,6 +13,31 @@
 	background-image: linear-gradient(to top, transparent 0%, rgba(1, 27, 58, 0.5) 100%);
 }
 
+.header {
+  &.affix {
+    width: 100%;
+    top: 0;
+    background-color: $white;
+    border-bottom: 1px solid rgba($black, 0.3);
+    -webkit-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.3);
+  }
+}
+
+.header_view-style_3,
+.header_view-style_4 {
+  &.affix {
+    background: rgba(1, 27, 58, 0.75);
+    .header__content {
+      background: transparent !important;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
 // Logo
 .logo {
 	height: 100px;

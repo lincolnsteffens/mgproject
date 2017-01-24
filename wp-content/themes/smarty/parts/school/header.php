@@ -1,6 +1,7 @@
 <?php
 $header_view_style =  get_theme_mod( 'header_view_style', 1 );
 $top_bar_language = get_theme_mod( 'top_bar_language', true );
+$sticky_header = get_theme_mod( 'sticky_header', false );
 
 /* --- DEMO ---*/
 if( isset( $_REQUEST['header_style'] ) ) {
@@ -24,7 +25,7 @@ if( !empty( $header_view_style ) ) {
     <?php
     /* --- Top Bar ---*/
     if( $top_bar_show ) {
-        get_template_part( 'parts/'.smarty_get_university_mode().'/top-bar', $header_view_style );
+        get_template_part( 'parts/'.smarty_get_layout_mode().'/top-bar', $header_view_style );
     }
     ?>
 
@@ -106,3 +107,20 @@ if( !empty( $header_view_style ) ) {
         ?>
     </div><!-- /header-mobile -->
 </div><!-- /.header-holder -->
+
+<?php if( $sticky_header === true ) : ?>
+    <script>
+        (function($) {
+            "use strict";
+
+            $(document).ready(function() {
+                $(".header.header_view-style_1, .header.header_view-style_2, .header.header_view-style_3, .header.header_view-style_4").affix({
+                    offset: {
+                        top: 50
+                    }
+                });
+            });
+
+        })(jQuery);
+    </script>
+<?php endif; ?>

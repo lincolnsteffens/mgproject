@@ -35,7 +35,7 @@ $courses_query = new WP_Query( $courses_query_args );
 						if( $course_teacher_id = get_post_meta( get_the_ID(), 'course_teacher', true ) ) {
 								$course_teacher = '<a href="'. esc_url( get_the_permalink( $course_teacher_id ) ) .'">' . get_the_title( $course_teacher_id ) . '</a>';
 						} else {
-								$course_teacher = esc_html__('Teacher didn\'t  selected', 'smarty');
+								$course_teacher = esc_html__('', 'smarty');
 						}
 					?>
 					<td><?php echo wp_kses_post( $course_teacher ); ?></td>

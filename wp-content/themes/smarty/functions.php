@@ -29,19 +29,19 @@ require_once $inc_path . '/tgm/tgm-plugin-registration.php';
 
 // 4. Custom Post Type
 if( class_exists('STM_PostType') ) {
-	require_once $inc_path . '/custom-post-types/'.smarty_get_university_mode().'/custom-post-types.php';
+	require_once $inc_path . '/custom-post-types/'.smarty_get_layout_mode().'/custom-post-types.php';
 }
 
 // 5. Customizer
-require_once $inc_path . '/customizer/'.smarty_get_university_mode().'/customizer.class.php';
+require_once $inc_path . '/customizer/'.smarty_get_layout_mode().'/customizer.class.php';
 
 // 6. Custom
 require_once $inc_path . '/custom.php';
 
 // 7. Visual Composer
 if( defined( 'WPB_VC_VERSION' ) ) {
-	require_once $inc_path . '/visual-composer/'.smarty_get_university_mode().'/visual-composer.php';
-    $dir = get_stylesheet_directory() . '/vc_templates/'.smarty_get_university_mode();
+	require_once $inc_path . '/visual-composer/'.smarty_get_layout_mode().'/visual-composer.php';
+    $dir = get_template_directory() . '/vc_templates/'.smarty_get_layout_mode();
     vc_set_shortcodes_templates_dir( $dir );
 }
 

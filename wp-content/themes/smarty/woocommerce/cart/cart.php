@@ -6,6 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
+<?php $page_id = smarty_page_id(); ?>
+<?php if ( get_post_meta( $page_id, 'stm_page_title_hide', true ) ) : ?>
+    <h1><?php the_title(); ?></h1>
+<?php endif; ?>
 
 <form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 

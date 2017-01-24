@@ -4,6 +4,7 @@
 
 .stm-title.wrap-title {
   float: left;
+  margin-right: 10px;
 }
 
 .stm-title_sep_left,
@@ -70,7 +71,7 @@
   display: inline-block;
   vertical-align: top;
   margin-top: 4px;
-  margin-left: 60px;
+  margin-left: 50px;
   padding-bottom: 0;
 }
 
@@ -102,4 +103,20 @@
   &:after {
     background-color: $dark-red !important;
   }
+}
+
+.wrap-title-box {
+  float: left;
+  width: 100%;
+}
+
+.wrap-title-box-long {
+  .stm-title {
+    margin-bottom: 0 !important;
+  }
+
+  .stm-title-more-link {
+    margin: 0 0 40px !important;
+  }
+  
 }

@@ -6,8 +6,24 @@ if ( ! function_exists('smarty_fonts_url') ) :
         $fonts     = array();
         $subsets   = 'latin,latin-ext';
 
-        if ( 'off' !== _x( 'on', 'Lato font: on or off', 'smarty' ) ) {
-            $fonts[] = 'Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic';
+        if ( smarty_get_layout_mode() === 'school' ) {
+            if ( 'off' !== _x( 'on', 'Lato font: on or off', 'smarty' ) ) {
+                $fonts[] = 'Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic';
+            }
+        }
+        else if(smarty_get_layout_mode() === 'university') {
+            if ( 'off' !== _x( 'on', 'Lato font: on or off', 'smarty' ) ) {
+                $fonts[] = 'Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic';
+            }
+        }
+        else if(smarty_get_layout_mode() === 'kindergarten') {
+            if ( 'off' !== _x( 'on', 'Dosis font: on or off', 'smarty' ) ) {
+                $fonts[] = 'Dosis:400,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic';
+            }
+
+            if ( 'off' !== _x( 'on', 'Grand Hotel font: on or off', 'smarty' ) ) {
+                $fonts[] = 'Grand Hotel:400,400italic';
+            }
         }
 
         if ( $fonts ) {
@@ -31,7 +47,7 @@ if ( ! function_exists('smarty_register_scripts') ) {
         wp_register_style( 'stm-style', get_stylesheet_uri(), array(), SMARTY_THEME_VERSION, 'all' );
 
         // Main Style
-        wp_register_style( 'stm-skin-default', get_template_directory_uri() . '/assets/css/'.smarty_get_university_mode().'/main.css', array(), SMARTY_THEME_VERSION, 'all' );
+        wp_register_style( 'stm-skin-default', get_template_directory_uri() . '/assets/css/'.smarty_get_layout_mode().'/main.css', array(), SMARTY_THEME_VERSION, 'all' );
 
         // STM Icon
         wp_register_style( 'stm-icon', get_template_directory_uri() . '/assets/fonts/stm-icon/style.css', array(), SMARTY_THEME_VERSION, 'all' );
@@ -59,9 +75,9 @@ if ( ! function_exists('smarty_register_scripts') ) {
         wp_register_script( 'stm-select2', get_template_directory_uri() . '/assets/js/vendor/select2/js/select2.min.js', array( 'jquery' ), SMARTY_THEME_VERSION, true );
 
         // Skins
-        wp_register_style( 'stm-skin-orange', get_template_directory_uri() . '/assets/css/'.smarty_get_university_mode().'/skin-orange.css', null, SMARTY_THEME_VERSION, 'all' );
-        wp_register_style( 'stm-skin-purple', get_template_directory_uri() . '/assets/css/'.smarty_get_university_mode().'/skin-purple.css', null, SMARTY_THEME_VERSION, 'all' );
-        wp_register_style( 'stm-skin-red', get_template_directory_uri() . '/assets/css/'.smarty_get_university_mode().'/skin-red.css', null, SMARTY_THEME_VERSION, 'all' );
+        wp_register_style( 'stm-skin-orange', get_template_directory_uri() . '/assets/css/'.smarty_get_layout_mode().'/skin-orange.css', null, SMARTY_THEME_VERSION, 'all' );
+        wp_register_style( 'stm-skin-purple', get_template_directory_uri() . '/assets/css/'.smarty_get_layout_mode().'/skin-purple.css', null, SMARTY_THEME_VERSION, 'all' );
+        wp_register_style( 'stm-skin-red', get_template_directory_uri() . '/assets/css/'.smarty_get_layout_mode().'/skin-red.css', null, SMARTY_THEME_VERSION, 'all' );
         if( is_dir( $upload_dir['basedir'] . '/stm_uploads' ) ) {
             wp_register_style( 'stm-skin-custom', $stm_upload_dir . '/skin-custom.css', null, SMARTY_THEME_VERSION, 'all' );
         }
@@ -72,6 +88,9 @@ if ( ! function_exists('smarty_register_scripts') ) {
 
         // CountUp
         wp_register_script( 'count-up', get_template_directory_uri() . '/assets/js/vendor/countUp.min.js', array( 'jquery' ), SMARTY_THEME_VERSION, true );
+
+        // CountDown
+        wp_register_script( 'countdown', get_template_directory_uri() . '/assets/js/vendor/jquery.countdown.js', array( 'jquery' ), SMARTY_THEME_VERSION, true );
 
         // Isotope
         wp_register_script( 'isotope', get_template_directory_uri() . '/assets/js/vendor/isotope.pkgd.min.js', array( 'jquery' ), SMARTY_THEME_VERSION, true );

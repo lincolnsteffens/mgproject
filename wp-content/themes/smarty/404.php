@@ -1,3 +1,8 @@
 <?php
-get_template_part( 'parts/'.smarty_get_university_mode().'/page', 'error' );
+/*
+Template Name: Page 404
+*/
+?>
+<?php
+get_template_part( 'parts/'.smarty_get_layout_mode().'/page', 'error' );
 ?>

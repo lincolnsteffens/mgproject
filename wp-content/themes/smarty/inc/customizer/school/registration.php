@@ -147,7 +147,7 @@ STM_Customizer::setSection( 'typography', array(
 		't_h3_font_family' => array(
 			'label'       => esc_html__( 'Font Family', 'smarty' ),
 			'type'        => 'stm-font-family',
-			'output'      => 'h1,.h1'
+			'output'      => 'h3,.h3'
 		),
 		't_h3_font_weight' => array(
 			'label'       => esc_html__( 'Font Weight', 'smarty' ),
@@ -403,6 +403,12 @@ STM_Customizer::setSection( 'header', array(
 			),
 			'default' => 1
 		),
+        'sticky_header'     => array(
+            'label'             => esc_html__( 'Sticky header', 'smarty' ),
+            'type'              => 'stm-checkbox',
+            'sanitize_callback' => 'sanitize_checkbox',
+            'default'           => false
+        ),
 		'header_section_title_2' => array(
 			'label'       => esc_html__( 'Top Bar', 'smarty' ),
 			'type'        => 'stm-heading'

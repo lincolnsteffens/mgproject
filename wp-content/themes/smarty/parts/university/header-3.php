@@ -24,7 +24,7 @@ if( !empty( $header_view_style ) ) {
 <?php
 /* --- Top Bar ---*/
 if( $top_bar_show ) {
-    get_template_part( 'parts/'.smarty_get_university_mode().'/top-bar', $header_view_style );
+    get_template_part( 'parts/'.smarty_get_layout_mode().'/top-bar', $header_view_style );
 }
 ?>
 </div>

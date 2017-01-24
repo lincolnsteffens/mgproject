@@ -36,7 +36,7 @@ if( !empty( $posts_sidebar_id ) && $posts_sidebar_id != 'wp' ) {
 				<?php if( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php
-                            get_template_part( 'parts/'.smarty_get_university_mode().'/content', get_post_format() );
+                            get_template_part( 'parts/'.smarty_get_layout_mode().'/content', get_post_format() );
                         ?>
 					<?php endwhile; ?>
 				<?php else : ?>

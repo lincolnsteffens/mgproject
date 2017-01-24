@@ -157,7 +157,7 @@ STM_Customizer::setSection( 'typography', array(
 		't_h3_font_family' => array(
 			'label'       => esc_html__( 'Font Family', 'smarty' ),
 			'type'        => 'stm-font-family',
-			'output'      => 'h1,.h1'
+			'output'      => 'h3,.h3'
 		),
 		't_h3_font_weight' => array(
 			'label'       => esc_html__( 'Font Weight', 'smarty' ),
@@ -276,8 +276,8 @@ STM_Customizer::setSection( 'site_settings', array(
 			'choices' => array(
 				'default' => esc_html__( 'Default', 'smarty' ),
 				'orange'  => esc_html__( 'Orange', 'smarty' ),
-				'purple'  => esc_html__( 'Purple', 'smarty' ),
-				'red'     => esc_html__( 'Red', 'smarty' ),
+				'purple'  => esc_html__( 'Navy', 'smarty' ),
+				'red'     => esc_html__( 'Geen', 'smarty' ),
 				'custom'  => esc_html__( 'Custom Colors', 'smarty' ),
 			),
 			'default' => 'default'
@@ -291,11 +291,6 @@ STM_Customizer::setSection( 'site_settings', array(
 			'label'   => esc_html__( 'Custom Secondary Color', 'smarty' ),
 			'type'    => 'color',
 			'default' => '#00aaff'
-		),
-		'skin_color_third' => array(
-			'label'   => esc_html__( 'Custom Third Color', 'smarty' ),
-			'type'    => 'color',
-			'default' => '#011b3a'
 		),
 		'frontend_customizer_show' => array(
 			'label'   => esc_html__( 'Frontend Customizer', 'smarty' ),

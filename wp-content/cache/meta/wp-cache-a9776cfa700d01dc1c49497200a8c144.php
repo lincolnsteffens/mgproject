@@ -1,0 +1,1 @@
+<?php die(); ?>{"headers":{"Vary":"Vary: Cookie","Content-Type":"Content-Type: text\/html; charset=UTF-8","Last-Modified":"Last-Modified: Fri, 20 Jan 2017 12:28:31 GMT"},"uri":"marcusgrahamproject.org\/mg-rebuild\/bootcamp\/","blog_id":1,"post":1124,"key":"marcusgrahamproject.org80\/mg-rebuild\/bootcamp\/d445833a161e11b189e0580a6bc8144d"}

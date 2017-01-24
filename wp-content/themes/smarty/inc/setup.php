@@ -108,6 +108,6 @@ if ( ! function_exists('smarty_register_sidebars') ) {
 add_action( 'widgets_init', 'smarty_register_sidebars', 50 );
 
 // Theme Layouts
-function smarty_get_university_mode() {
+function smarty_get_layout_mode() {
     return get_option('stm_layout_mode', 'school');
 }

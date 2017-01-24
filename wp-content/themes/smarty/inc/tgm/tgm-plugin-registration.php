@@ -67,7 +67,7 @@ function smarty_register_required_plugins() {
 			'name'         => 'STM Importer',
 			'slug'         => 'stm-importer',
 			'source'       => $plugins_path . '/stm-importer.zip',
-			'version'      => '1.2',
+			'version'      => '1.3',
 			'required'     => true,
 		),
 		array(
@@ -75,7 +75,7 @@ function smarty_register_required_plugins() {
 			'slug'         => 'js_composer',
 			'source'       => $plugins_path . '/js_composer.zip',
 			'external_url' => 'http://vc.wpbakery.com',
-			'version'      => '4.12.1',
+			'version'      => '4.12',
 			'required'     => true
 		),
 		array(
@@ -113,6 +113,10 @@ function smarty_register_required_plugins() {
 			'name'     => 'TinyMCE Advanced',
 			'slug'     => 'tinymce-advanced'
 		),
+        array(
+            'name'     => 'Breadcrumb NavXT',
+            'slug'     => 'breadcrumb-navxt'
+        ),
 		array(
 			'name'     => 'Category Order and Taxonomy Terms Order',
 			'slug'     => 'taxonomy-terms-order'

@@ -98,7 +98,7 @@ if ( function_exists( 'vc_map' ) ) {
 	if ( ! function_exists('smarty_vc_map_shortcodes') ) {
 
 		function smarty_vc_map_shortcodes() {
-			$custom_vc_map_path = get_template_directory() . '/inc/visual-composer/'.smarty_get_university_mode().'/vc-map';
+			$custom_vc_map_path = get_template_directory() . '/inc/visual-composer/'.smarty_get_layout_mode().'/vc-map';
 
 			// Achievement
 			require_once $custom_vc_map_path . '/stm_achievement.php';
@@ -3708,19 +3708,19 @@ if ( function_exists( 'vc_map' ) ) {
 				)
 			) );
 
-			// Course - Teacher bio
-			vc_map( array(
-				'name'        => esc_html__( '(STM) Teacher - Bio', 'smarty' ),
-				'base'        => 'stm_course_teacher_bio',
-				'category'    => esc_html__( 'STM - Course', 'smarty' ),
-				'params'      => array(
-					array(
-						'type'       => 'css_editor',
-						'heading'    => esc_html__( 'Css', 'smarty' ),
-						'param_name' => 'css'
-					)
-				)
-			) );
+            // Course - Teacher bio
+            vc_map( array(
+                'name'        => esc_html__( '(STM) Teacher course- Bio', 'smarty' ),
+                'base'        => 'stm_course_teacher_bio',
+                'category'    => esc_html__( 'STM - Course', 'smarty' ),
+                'params'      => array(
+                    array(
+                        'type'       => 'css_editor',
+                        'heading'    => esc_html__( 'Css', 'smarty' ),
+                        'param_name' => 'css'
+                    )
+                )
+            ) );
 
 			// Course - Topics
 			vc_map( array(
